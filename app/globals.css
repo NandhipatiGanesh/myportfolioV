@@ -1,6 +1,20 @@
 @import 'tailwindcss';
 @plugin '@tailwindcss/typography';
 @custom-variant dark (&:is(.dark *));
+/* Import Google Fonts */
+/* Import DM Sans font */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+/* Define the custom font variable */
+:root {
+  --font-inter-tight: 'DM Sans', sans-serif;
+}
+
+/* Apply the font globally */
+body {
+  font-family: var(--font-inter-tight);
+}
+
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
