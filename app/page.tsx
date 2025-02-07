@@ -18,7 +18,9 @@ import {
   BLOG_POSTS,
   EMAIL,
   SOCIAL_LINKS,
-} from './data'
+} from './data';
+
+import axios from 'axios'
 
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
@@ -122,6 +124,7 @@ function MagneticSocialLink({
     </Magnetic>
   )
 }
+
 
 export default function Personal() {
   return (
@@ -229,15 +232,15 @@ export default function Personal() {
               <Link
                 key={post.uid}
                 className="-mx-3 rounded-xl px-3 py-3"
-                href={post.link}
+                href='https://webcomponents.blog/'
                 data-id={post.uid}
               >
                 <div className="flex flex-col space-y-1">
                   <h4 className="font-normal dark:text-zinc-100">
-                    {post.title}
+                    Read my Blogs in these website
                   </h4>
                   <p className="text-zinc-500 dark:text-zinc-400">
-                    {post.description}
+                    Webcomponents.blog
                   </p>
                 </div>
               </Link>

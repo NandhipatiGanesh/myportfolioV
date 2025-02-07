@@ -1,78 +1,96 @@
+'use client';
+import axios from 'axios';
+import { useEffect, useState } from 'react'
+
 type Project = {
-  name: string
-  description: string
-  link: string
-  video: string
-  id: string
-}
+  name: string;
+  description: string;
+  link: string;
+  video: string;
+  id: string;
+};
 
 type WorkExperience = {
-  company: string
-  title: string
-  start: string
-  end: string
-  link: string
-  id: string
-}
+  company: string;
+  title: string;
+  start: string;
+  end: string;
+  link: string;
+  id: string;
+};
 
+
+// Define the BlogPost type (TypeScript)
 type BlogPost = {
-  title: string
-  description: string
-  link: string
-  uid: string
-}
+  title: string;
+  description: string;
+  link: string;
+  uid: string;
+};
 
 type SocialLink = {
-  label: string
-  link: string
-}
+  label: string;
+  link: string;
+};
 
 export const PROJECTS: Project[] = [
   {
     name: 'Motion Primitives Pro',
-    description:
-      'Advanced components and templates to craft beautiful websites.',
+    description: 'Advanced components and templates to craft beautiful websites.',
     link: 'https://pro.motion-primitives.com/',
-    video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
+    video: 'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/newProfileItem/d898be8a-7037-4c71-af0c-8997239b050d.mp4?_a=DATAdtAAZAA0',
     id: 'project1',
   },
   {
     name: 'Motion Primitives',
     description: 'UI kit to make beautiful, animated interfaces.',
     link: 'https://motion-primitives.com/',
-    video:
-      'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
+    video: 'https://res.cloudinary.com/read-cv/video/upload/t_v_b/v1/1/profileItems/W2azTw5BVbMXfj7F53G92hMVIn32/XSfIvT7BUWbPRXhrbLed/ee6871c9-8400-49d2-8be9-e32675eabf7e.mp4?_a=DATAdtAAZAA0',
     id: 'project2',
   },
-]
+  {
+    name: 'Videoscroll',
+    description: 'UI UX component for Interactive webs',
+    link: '#',
+    video: 'https://webcomponents.blog/wp-content/uploads/2025/02/video-scroll-animmation-video.mp4',
+    id: 'project3',
+  },
+  {
+    name : 'Dynamic Island',
+    description: 'UI UX Components for Interactive Webs',
+    link: '#',
+    video: 'https://webcomponents.blog/wp-content/uploads/2025/02/Scroll-island-video.mp4',
+    id: 'project4',
+  },
+  {
+    name : 'Movemybike website design',
+    description : 'implemented uiux and form booking process',
+    link: 'https://bookings.movemybike.in/',
+    video: 'https://webcomponents.blog/wp-content/uploads/2025/02/movemybike-react-site-video.mp4',
+    id : 'project5',
+  }
+];
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
   {
-    company: 'Reglazed Studio',
-    title: 'CEO',
-    start: '2024',
+    company: 'Advait Labs',
+    title: 'Web Designer & Developer',
+    start: 'Dec-2023',
     end: 'Present',
-    link: 'https://ibelick.com',
+    link: 'https://advaitlabs.com/',
     id: 'work1',
   },
   {
     company: 'Freelance',
-    title: 'Design Engineer',
+    title: 'UI UX Designer',
     start: '2022',
-    end: '2024',
+    end: '2023',
     link: 'https://ibelick.com',
     id: 'work2',
-  },
-  {
-    company: 'Freelance',
-    title: 'Front-end Developer',
-    start: '2017',
-    end: 'Present',
-    link: 'https://ibelick.com',
-    id: 'work3',
-  },
-]
+  }
+];
+
+
 
 export const BLOG_POSTS: BlogPost[] = [
   {
@@ -114,6 +132,6 @@ export const SOCIAL_LINKS: SocialLink[] = [
     label: 'Instagram',
     link: 'https://www.instagram.com/ibelick',
   },
-]
+];
 
-export const EMAIL = 'your@email.com'
+export const EMAIL = 'your@email.com' ;
