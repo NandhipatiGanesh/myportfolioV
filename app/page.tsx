@@ -228,12 +228,10 @@ export default function Personal() {
               duration: 0.2,
             }}
           >
-            {BLOG_POSTS.map((post) => (
+            
               <Link
-                key={post.uid}
                 className="-mx-3 rounded-xl px-3 py-3"
-                href='https://webcomponents.blog/'
-                data-id={post.uid}
+                href='https://webcomponents.blog/'                
               >
                 <div className="flex flex-col space-y-1">
                   <h4 className="font-normal dark:text-zinc-100">
@@ -244,7 +242,6 @@ export default function Personal() {
                   </p>
                 </div>
               </Link>
-            ))}
           </AnimatedBackground>
         </div>
       </motion.section>
