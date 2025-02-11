@@ -61,6 +61,13 @@ export const PROJECTS: Project[] = [
     link: 'https://pathlete.org/',
     video: 'https://webcomponents.blog/wp-content/uploads/2025/02/Pathlete-project-video-tour.mp4',
     id : 'project6',  
+  },
+  {
+    name : 'Service List with Image reveal after hover',
+    description : 'Service List with Image reveal after hover',
+    link: '#',
+    video: 'https://webcomponents.blog/wp-content/uploads/2025/02/list-with-image-hover-effect-video.mp4',
+    id : 'project7',
   }
 ];
 
