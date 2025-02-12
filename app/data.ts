@@ -68,6 +68,13 @@ export const PROJECTS: Project[] = [
     link: '#',
     video: 'https://webcomponents.blog/wp-content/uploads/2025/02/list-with-image-hover-effect-video.mp4',
     id : 'project7',
+  },
+  {
+    name : 'Need help with Interaction Design',
+    description : 'Need help with Interaction Design',
+    link: '#',
+    video: 'https://webcomponents.blog/wp-content/uploads/2025/02/Need-Help-Interaction-video.mp4',
+    id : 'project8',
   }
 ];
 
