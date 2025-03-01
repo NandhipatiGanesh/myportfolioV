@@ -75,7 +75,22 @@ export const PROJECTS: Project[] = [
     link: '#',
     video: 'https://webcomponents.blog/wp-content/uploads/2025/02/Need-Help-Interaction-video.mp4',
     id : 'project8',
+  },
+  {
+    name : 'Create an account form',
+    description : 'Create an account form for website in html css js  UI UX',
+    link: '#',
+    video: 'https://webcomponents.blog/wp-content/uploads/2025/02/Create-an-account-form-for-website-in-html-css-js-video-youtube-1.mp4',
+    id : 'project8',
+  },
+  {
+    name : 'Send emails to blog subscribers',
+    description : '',
+    link : '#',
+    video : 'https://webcomponents.blog/wp-content/uploads/2025/03/Send-Emails-to-your-subscriber-for-free.webp',
+    id : 'project9',
   }
+
 ];
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
