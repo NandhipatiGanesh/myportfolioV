@@ -11,9 +11,9 @@ export const viewport = {
 }
 
 export const metadata = {
-  title: 'Nim - Personal website template',
+  title: 'Ganesh Portfolio',
   description:
-    'Nim is a free and open-source personal website template built with Next.js 15, React 19 and Motion-Primitives.',
+    'Web Designer & Developer from india',
 }
 
 const geist = DM_Sans({
