@@ -1,13 +1,38 @@
+// /** @type {import('tailwindcss').Config} */
+// module.exports = {
+//     content: ["./app/**/*.{js,ts,jsx,tsx}", "./pages/**/*.{js,ts,jsx,tsx}"], // Adjust the paths as needed
+//     theme: {
+//       extend: {
+//         fontFamily: {
+//           sans: ['"DM Sans"', 'sans-serif'], // Adding DM Sans font
+//         },
+//       },
+//     },
+//     plugins: [],
+//   };
+  
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-    content: ["./app/**/*.{js,ts,jsx,tsx}", "./pages/**/*.{js,ts,jsx,tsx}"], // Adjust the paths as needed
-    theme: {
-      extend: {
-        fontFamily: {
-          sans: ['"DM Sans"', 'sans-serif'], // Adding DM Sans font
+  content: [
+    "./app/**/*.{js,ts,jsx,tsx}",
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}" // include components if not already
+  ],
+  theme: {
+    extend: {
+      fontFamily: {
+        sans: ['"DM Sans"', 'sans-serif'],
+      },
+      animation: {
+        scroll: 'scroll 40s linear infinite',
+      },
+      keyframes: {
+        scroll: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
         },
       },
     },
-    plugins: [],
-  };
-  
+  },
+  plugins: [],
+};

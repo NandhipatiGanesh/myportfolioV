@@ -1,8 +1,9 @@
 import { DM_Sans } from 'next/font/google'
 import './globals.css'
-import { Header } from './header'
+import Header from './header'
 import { Footer } from './footer'
 import { ThemeProvider } from 'next-themes'
+import AnnouncementBanner from '@/components/screens/announcement-banner'
 
 export const viewport = {
   width: 'device-width',
@@ -12,8 +13,7 @@ export const viewport = {
 
 export const metadata = {
   title: 'Ganesh Portfolio',
-  description:
-    'Web Designer & Developer from india',
+  description: 'Web Designer & Developer from india',
 }
 
 const geist = DM_Sans({
@@ -26,7 +26,11 @@ const geistMono = DM_Sans({
   subsets: ['latin'],
 })
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -38,11 +42,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           storageKey="theme"
           defaultTheme="system"
         >
+          <AnnouncementBanner />
           <div
             className="flex min-h-screen w-full flex-col"
             style={{ fontFamily: 'var(--font-inter-tight)' }} // Apply the custom font here
           >
-            <div className="relative mx-auto w-full max-w-screen-sm flex-1 px-4 pt-20">
+            <div className="relative mx-auto w-full flex-1">
               <Header />
               {children}
               <Footer />
