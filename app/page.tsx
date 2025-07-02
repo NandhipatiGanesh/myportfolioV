@@ -1,4 +1,10 @@
-'use client'
+'use client';
+import React from 'react';
+import useRotatingBg from '@/hooks/useRotatingBg';
+import Header from '@/app/header';
+import Hero from '@/components/screens/hero';
+import WorkSection from '@/components/screens/WorkSection'
+
 import { motion } from 'motion/react'
 import { XIcon } from 'lucide-react'
 import { Spotlight } from '@/components/ui/spotlight'
@@ -19,7 +25,6 @@ import {
   EMAIL,
   SOCIAL_LINKS,
 } from './data'
-import Hero from '@/components/screens/hero'
 import AboutSection from '@/components/screens/about'
 import { InfiniteSlider } from '@/components/screens/infinite-slider'
 
@@ -126,41 +131,48 @@ function MagneticSocialLink({
   )
 }
 
+
 export default function Personal() {
+  const bgColors = ['#fdf6e3', '#f0fff0', '#e0f7fa', '#fce4ec', '#fff9c4', '#f5f5dc']; // light brown, etc.
+  const currentColor = useRotatingBg(bgColors, 3000); // rotate every 3 seconds
+
+
   return (
     <>
-      <Hero />
+      <Header currentColor={currentColor} />
+      <Hero currentColor={currentColor} />
+
       <AboutSection />
-      <div className="bg-white">
-        <InfiniteSlider speedOnHover={10} gap={40}>
-          <img
-            src="/logos/monzo.png"
-            alt="Monzo"
-            className="h-10 object-contain"
-          />
-          <img
-            src="/logos/mastercard.png"
-            alt="Mastercard"
-            className="h-10 object-contain"
-          />
-          <img
-            src="/logos/pleo.png"
-            alt="Pleo"
-            className="h-10 object-contain"
-          />
-          <img
-            src="/logos/trustpilot.png"
-            alt="Trustpilot"
-            className="h-10 object-contain"
-          />
-          <img src="/logos/fy.png" alt="FY" className="h-10 object-contain" />
-          <img
-            src="/logos/morrisons.png"
-            alt="Morrisons"
-            className="h-10 object-contain"
-          />
+      <div className="bg-white py-12 border-y border-gray-200">
+        <InfiniteSlider speedOnHover={30} gap={60}> {/* Gap between logos */}
+          {[
+            { src: "/logos/carefree.svg", alt: "Carefree" },
+            { src: "/logos/monzo.svg", alt: "Monzo" },
+            { src: "/logos/mastercard.svg", alt: "Mastercard" },
+            { src: "/logos/pleo.svg", alt: "Pleo" },
+            { src: "/logos/trustpilot.svg", alt: "Trustpilot" },
+            { src: "/logos/fy!.svg", alt: "FY!" },
+            { src: "/logos/morrisons.svg", alt: "Morrisons" },
+            { src: "/logos/thriva.svg", alt: "Thriva" },
+            { src: "/logos/moving brands.svg", alt: "Moving Brands" },
+            { src: "/logos/trust keith.svg", alt: "Trust Keith" },
+          ].map((logo, index) => (
+            <img
+              key={index}
+              src={logo.src}
+              alt={logo.alt}
+              className="h-10 w-auto object-contain mx-20"
+            />
+          ))}
         </InfiniteSlider>
       </div>
+
+      <div className="h-30 bg-white"></div>
+
+      <WorkSection />
+
+
+
       <motion.main
         className="space-y-24"
         variants={VARIANTS_CONTAINER}
