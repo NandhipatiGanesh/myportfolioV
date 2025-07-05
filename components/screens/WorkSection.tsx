@@ -1,6 +1,39 @@
 'use client';
 import React, { useState } from 'react';
 
+const projects = [
+  {
+    id: 'work1',
+    image: '/images/work/pleo-onboarding.png',
+    title: 'Pleo →',
+    subtitle: 'Onboarding employees in-app',
+  },
+  {
+    id: 'work2',
+    image: '/images/work/cornerfold.jpg',
+    title: 'Cornerfold →',
+    subtitle: 'Save your favourite places',
+  },
+  {
+    id: 'work3',
+    image: '/images/work/kernel.jpg',
+    title: 'Kernel →',
+    subtitle: 'Marketing site design and build',
+  },
+  {
+    id: 'work4',
+    image: '/images/work/pleo-expense.jpg',
+    title: 'Pleo →',
+    subtitle: 'Hassle-free expense allowances',
+  },
+  {
+    id: 'work5',
+    image: '/images/work/monzo-credit.jpg',
+    title: 'Monzo →',
+    subtitle: 'Credit scores simplified',
+  },
+];
+
 const WorkSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState('All');
   const tabs = ['All', 'Product', 'Web'];
@@ -31,76 +64,31 @@ const WorkSection: React.FC = () => {
         </div>
       </div>
 
-      <div className="h-15 bg-white"></div>
+      <div className="h-15 bg-white" />
 
       {/* Project Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        {/* Row 1 - Full Width */}
-        <div className="col-span-1 sm:col-span-2 space-y-2">
-          <img
-            src="/images/work/pleo-onboarding.png"
-            alt="Pleo Onboarding"
-            className="w-full rounded-xl object-cover transition duration-300 ease-in-out hover:brightness-90 hover:animate-tilt"
-          />
-          <div>
-            <p className="text-2xl font-semibold text-black">Pleo →</p>
-            <p className="text-2xl text-black">Onboarding employees in-app</p>
+        {projects.map((project, index) => (
+          <div
+            key={project.id} // ✅ Unique keys
+            className={`space-y-2 ${
+              index === 0 ? 'col-span-1 sm:col-span-2' : ''
+            }`}
+          >
+            <img
+              src={project.image}
+              alt={`${project.title} thumbnail`}
+              className="w-full rounded-xl object-cover transition duration-300 ease-in-out hover:brightness-90 hover:scale-105"
+            />
+            <div>
+              <p className="text-2xl font-semibold text-black">{project.title}</p>
+              <p className="text-2xl text-black">{project.subtitle}</p>
+            </div>
           </div>
-        </div>
-
-        {/* Row 2 */}
-        <div className="space-y-2">
-          <img
-            src="/images/work/cornerfold.jpg"
-            alt="Cornerfold"
-            className="w-full rounded-xl object-cover transition duration-300 ease-in-out hover:brightness-90 hover:animate-tilt"
-          />
-          <div>
-            <p className="text-2xl font-semibold text-black">Cornerfold →</p>
-            <p className="text-2xl text-black">Save your favourite places</p>
-          </div>
-        </div>
-
-        <div className="space-y-2">
-          <img
-            src="/images/work/kernel.jpg"
-            alt="Kernel"
-            className="w-full rounded-xl object-cover transition duration-300 ease-in-out hover:brightness-90 hover:animate-tilt"
-          />
-          <div>
-            <p className="text-2xl font-semibold text-black">Kernel →</p>
-            <p className="text-2xl text-black">Marketing site design and build</p>
-          </div>
-        </div>
-
-        {/* Row 3 */}
-        <div className="space-y-2">
-          <img
-            src="/images/work/pleo-expense.jpg"
-            alt="Pleo Expense"
-            className="w-full rounded-xl object-cover transition duration-300 ease-in-out hover:brightness-90 hover:animate-tilt"
-          />
-          <div>
-            <p className="text-2xl font-semibold text-black">Pleo →</p>
-            <p className="text-2xl text-black">Hassle-free expense allowances</p>
-          </div>
-        </div>
-
-        <div className="space-y-2">
-          <img
-            src="/images/work/monzo-credit.jpg"
-            alt="Monzo Credit"
-            className="w-full rounded-xl object-cover transition duration-300 ease-in-out hover:brightness-90 hover:animate-tilt"
-          />
-          <div>
-            <p className="text-2xl font-semibold text-black">Monzo →</p>
-            <p className="text-2xl text-black">Credit scores simplified</p>
-          </div>
-        </div>
+        ))}
       </div>
 
-      <div className="h-30 bg-white"></div>
-      
+      <div className="h-20 bg-white" />
     </section>
   );
 };
