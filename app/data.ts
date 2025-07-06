@@ -35,62 +35,40 @@ type SocialLink = {
 
 export const PROJECTS: Project[] = [
   {
-    name: 'Videoscroll',
-    description: 'UI UX component for Interactive webs',
+    id: 'work1',
+    name: 'Pleo',
+    description: 'Onboarding employee in-app',
     link: '#',
-    video: 'https://webcomponents.blog/wp-content/uploads/2025/02/video-scroll-animmation-video.mp4',
-    id: 'project3',
+    video: '/images/work/pleo-onboarding.png',
   },
   {
-    name : 'Dynamic Island',
-    description: 'UI UX Components for Interactive Webs',
+    id: 'work2',
+    name: 'Cornerfold',
+    description: 'Save your favourite places',
     link: '#',
-    video: 'https://webcomponents.blog/wp-content/uploads/2025/02/Scroll-island-video.mp4',
-    id: 'project4',
+    video: '/images/work/cornerfold.jpg',
   },
   {
-    name : 'Movemybike website design',
-    description : 'implemented uiux and form booking process',
-    link: 'https://bookings.movemybike.in/',
-    video: 'https://webcomponents.blog/wp-content/uploads/2025/02/movemybike-react-site-video.mp4',
-    id : 'project5',
-  },
-  {
-    name : 'Pathlete Course Selling Website',
-    description : 'Pathology Histology Course Selling Website',
-    link: 'https://pathlete.org/',
-    video: 'https://webcomponents.blog/wp-content/uploads/2025/02/Pathlete-project-video-tour.mp4',
-    id : 'project6',  
-  },
-  {
-    name : 'Service List with Image reveal after hover',
-    description : 'Service List with Image reveal after hover',
+    id: 'work3',
+    name: 'Kernel',
+    description: 'Marketing site design and build',
     link: '#',
-    video: 'https://webcomponents.blog/wp-content/uploads/2025/02/list-with-image-hover-effect-video.mp4',
-    id : 'project7',
+    video: '/images/work/kernel.jpg',
   },
   {
-    name : 'Need help with Interaction Design',
-    description : 'Need help with Interaction Design',
+    id: 'work4',
+    name: 'Pleo',
+    description: 'Hassle-free expense allowances',
     link: '#',
-    video: 'https://webcomponents.blog/wp-content/uploads/2025/02/Need-Help-Interaction-video.mp4',
-    id : 'project8',
+    video: '/images/work/pleo-expense.jpg',
   },
   {
-    name : 'Create an account form',
-    description : 'Create an account form for website in html css js  UI UX',
+    id: 'work5',
+    name: 'Monzo',
+    description: 'Credit scores simplified',
     link: '#',
-    video: 'https://webcomponents.blog/wp-content/uploads/2025/02/Create-an-account-form-for-website-in-html-css-js-video-youtube-1.mp4',
-    id : 'project8',
+    video: '/images/work/monzo-credit.jpg',
   },
-  {
-    name : 'Send emails to blog subscribers',
-    description : '',
-    link : '#',
-    video : 'https://webcomponents.blog/wp-content/uploads/2025/03/Send-Emails-to-your-subscriber-for-free.webp',
-    id : 'project9',
-  }
-
 ];
 
 export const WORK_EXPERIENCE: WorkExperience[] = [
@@ -153,6 +131,48 @@ export const SOCIAL_LINKS: SocialLink[] = [
   {
     label: 'Instagram',
     link: 'https://www.instagram.com/the_fallen.in/',
+  },
+];
+
+type WorkProject = {
+  title: string;
+  subtitle: string;
+  image: string;
+  link: string;
+  featured?: boolean;
+};
+
+export const WORK_PROJECTS: WorkProject[] = [
+  {
+    title: "Pleo →",
+    subtitle: "Onboarding employees in-app",
+    image: "/images/work/pleo-onboarding.png",
+    link: "#",
+    featured: true,
+  },
+  {
+    title: "Cornerfold →",
+    subtitle: "Save your favourite places",
+    image: "/images/work/cornerfold.jpg",
+    link: "#",
+  },
+  {
+    title: "Kernel →",
+    subtitle: "Marketing site design and build",
+    image: "/images/work/kernel.jpg",
+    link: "#",
+  },
+  {
+    title: "Pleo →",
+    subtitle: "Hassle-free expense allowances",
+    image: "/images/work/pleo-expense.jpg",
+    link: "#",
+  },
+  {
+    title: "Monzo →",
+    subtitle: "Credit scores simplified",
+    image: "/images/work/monzo-credit.jpg",
+    link: "#",
   },
 ];
 

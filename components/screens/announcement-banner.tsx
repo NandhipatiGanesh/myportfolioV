@@ -1,22 +1,15 @@
-import React from "react";
-import { ArrowRight } from "lucide-react";
-
-const AnnouncementBanner: React.FC = () => {
+export default function AnnouncementBanner() {
   return (
-    <div className="w-full bg-black text-white text-sm flex items-center justify-center px-4 py-2">
-      <span className="bg-gray-700 text-xs px-2 py-1 rounded-md mr-3">New</span>
-      <p className="flex items-center space-x-1">
-        <span>Unlimited Access to all of my Framer templates</span>
-        <span className="mx-1">·</span>
-        <a
-          href="#"
-          className="underline inline-flex items-center hover:opacity-80 transition-opacity"
-        >
-          Get bundle <ArrowRight className="w-4 h-4 ml-1" />
-        </a>
-      </p>
-    </div>
+    <section className="bg-black text-white py-[7px] text-center">
+      <a
+        href="#"
+        className="inline-block group transition-colors duration-300 hover:text-gray-400 cursor-pointer text-[14px] font-medium"
+      >
+        <span className="inline-block bg-[#9e9e9e] text-black px-[8px] py-[2px] rounded-[8px] mr-[6px] font-semibold transition-colors duration-300 group-hover:bg-gray-400">
+          New
+        </span>
+        Unlimited Access to all of my Framer templates · Get bundle →
+      </a>
+    </section>
   );
-};
-
-export default AnnouncementBanner;
+}

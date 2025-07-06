@@ -1,4 +1,10 @@
-'use client'
+'use client';
+import React from 'react';
+import useRotatingBg from '@/hooks/useRotatingBg';
+import Header from '@/app/header';
+import Hero from '@/components/screens/hero';
+import WorkSection from '@/components/screens/WorkSection'
+
 import { motion } from 'motion/react'
 import { XIcon } from 'lucide-react'
 import { Spotlight } from '@/components/ui/spotlight'
@@ -19,9 +25,18 @@ import {
   EMAIL,
   SOCIAL_LINKS,
 } from './data'
-import Hero from '@/components/screens/hero'
 import AboutSection from '@/components/screens/about'
 import { InfiniteSlider } from '@/components/screens/infinite-slider'
+import VenturesSection from '@/components/screens/Ventures';
+import TestimonialSection from '@/components/screens/Testimonal';
+import WritingSection from '@/components/screens/Writing';
+import AboutMe from '@/components/screens/AboutMe';
+import ExperienceSection from '@/components/screens/Experience';
+import ServicesSection from '@/components/screens/Services';
+import InterestsSection from '@/components/screens/Interests';
+import GetInTouchSection from '@/components/screens/GetInTouch';
+import EmailListSection from '@/components/screens/EmailList';
+import FooterSection from '@/components/screens/Footer';
 
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
@@ -126,41 +141,68 @@ function MagneticSocialLink({
   )
 }
 
+
 export default function Personal() {
+  const bgColors = ['#fdf6e3', '#f0fff0', '#e0f7fa', '#fce4ec', '#fff9c4', '#f5f5dc']; // light brown, etc.
+  const currentColor = useRotatingBg(bgColors, 3000); // rotate every 3 seconds
+
+
   return (
     <>
-      <Hero />
+      <Header currentColor={currentColor} />
+      <Hero currentColor={currentColor} />
+
       <AboutSection />
-      <div className="bg-white">
-        <InfiniteSlider speedOnHover={10} gap={40}>
-          <img
-            src="/logos/monzo.png"
-            alt="Monzo"
-            className="h-10 object-contain"
-          />
-          <img
-            src="/logos/mastercard.png"
-            alt="Mastercard"
-            className="h-10 object-contain"
-          />
-          <img
-            src="/logos/pleo.png"
-            alt="Pleo"
-            className="h-10 object-contain"
-          />
-          <img
-            src="/logos/trustpilot.png"
-            alt="Trustpilot"
-            className="h-10 object-contain"
-          />
-          <img src="/logos/fy.png" alt="FY" className="h-10 object-contain" />
-          <img
-            src="/logos/morrisons.png"
-            alt="Morrisons"
-            className="h-10 object-contain"
-          />
+      <div className="bg-white py-12 border-y border-gray-200">
+        <InfiniteSlider speedOnHover={30} gap={60}> {/* Gap between logos */}
+          {[
+            { src: "/logos/carefree.svg", alt: "Carefree" },
+            { src: "/logos/monzo.svg", alt: "Monzo" },
+            { src: "/logos/mastercard.svg", alt: "Mastercard" },
+            { src: "/logos/pleo.svg", alt: "Pleo" },
+            { src: "/logos/trustpilot.svg", alt: "Trustpilot" },
+            { src: "/logos/fy!.svg", alt: "FY!" },
+            { src: "/logos/morrisons.svg", alt: "Morrisons" },
+            { src: "/logos/thriva.svg", alt: "Thriva" },
+            { src: "/logos/moving brands.svg", alt: "Moving Brands" },
+            { src: "/logos/trust keith.svg", alt: "Trust Keith" },
+          ].map((logo, index) => (
+            <img
+              key={index}
+              src={logo.src}
+              alt={logo.alt}
+              className="h-10 w-auto object-contain mx-20"
+            />
+          ))}
         </InfiniteSlider>
       </div>
+
+      <div className="h-30 bg-white"></div>
+
+      <WorkSection />
+
+      <VenturesSection />
+
+      <TestimonialSection />
+
+      <WritingSection />
+
+      <AboutMe />
+
+      <ExperienceSection />
+
+      <ServicesSection />
+
+      <InterestsSection />
+
+      <GetInTouchSection />
+
+      <EmailListSection />
+
+      <FooterSection />
+
+
+
       <motion.main
         className="space-y-24"
         variants={VARIANTS_CONTAINER}
@@ -171,134 +213,34 @@ export default function Personal() {
           variants={VARIANTS_SECTION}
           transition={TRANSITION_SECTION}
         >
-          <div className="flex-1">
-            <p className="text-zinc-600 dark:text-zinc-400">
-              Focused on creating intuitive and performant web experiences.
-              Bridging the gap between design and development.
-            </p>
-          </div>
         </motion.section>
 
         <motion.section
           variants={VARIANTS_SECTION}
           transition={TRANSITION_SECTION}
         >
-          <h3 className="mb-5 text-lg font-medium">Selected Works</h3>
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
-            {PROJECTS.map((project) => (
-              <div key={project.name} className="space-y-2">
-                <div className="relative rounded-2xl bg-zinc-50/40 p-1 ring-1 ring-zinc-200/50 ring-inset dark:bg-zinc-950/40 dark:ring-zinc-800/50">
-                  <ProjectVideo src={project.video} />
-                </div>
-                <div className="px-1">
-                  <a
-                    className="font-base group relative inline-block font-[450] text-zinc-900 dark:text-zinc-50"
-                    href={project.link}
-                    target="_blank"
-                  >
-                    {project.name}
-                    <span className="absolute bottom-0.5 left-0 block h-[1px] w-full max-w-0 bg-zinc-900 transition-all duration-200 group-hover:max-w-full"></span>
-                  </a>
-                  <p className="text-base text-zinc-600 dark:text-zinc-400">
-                    {project.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
+
         </motion.section>
 
         <motion.section
           variants={VARIANTS_SECTION}
           transition={TRANSITION_SECTION}
         >
-          <h3 className="mb-5 text-lg font-medium">Work Experience</h3>
-          <div className="flex flex-col space-y-2">
-            {WORK_EXPERIENCE.map((job) => (
-              <a
-                className="relative overflow-hidden rounded-2xl bg-zinc-300/30 p-[1px] dark:bg-zinc-600/30"
-                href={job.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                key={job.id}
-              >
-                <Spotlight
-                  className="from-zinc-900 via-zinc-800 to-zinc-700 blur-2xl dark:from-zinc-100 dark:via-zinc-200 dark:to-zinc-50"
-                  size={64}
-                />
-                <div className="relative h-full w-full rounded-[15px] bg-white p-4 dark:bg-zinc-950">
-                  <div className="relative flex w-full flex-row justify-between">
-                    <div>
-                      <h4 className="font-normal dark:text-zinc-100">
-                        {job.title}
-                      </h4>
-                      <p className="text-zinc-500 dark:text-zinc-400">
-                        {job.company}
-                      </p>
-                    </div>
-                    <p className="text-zinc-600 dark:text-zinc-400">
-                      {job.start} - {job.end}
-                    </p>
-                  </div>
-                </div>
-              </a>
-            ))}
-          </div>
+
         </motion.section>
 
         <motion.section
           variants={VARIANTS_SECTION}
           transition={TRANSITION_SECTION}
         >
-          <h3 className="mb-3 text-lg font-medium">Blog</h3>
-          <div className="flex flex-col space-y-0">
-            <AnimatedBackground
-              enableHover
-              className="h-full w-full rounded-lg bg-zinc-100 dark:bg-zinc-900/80"
-              transition={{
-                type: 'spring',
-                bounce: 0,
-                duration: 0.2,
-              }}
-            >
-              <Link
-                className="-mx-3 rounded-xl px-3 py-3"
-                href="https://webcomponents.blog/"
-              >
-                <div className="flex flex-col space-y-1">
-                  <h4 className="font-normal dark:text-zinc-100">
-                    Read my Blogs in these website
-                  </h4>
-                  <p className="text-zinc-500 dark:text-zinc-400">
-                    Webcomponents.blog
-                  </p>
-                </div>
-              </Link>
-            </AnimatedBackground>
-          </div>
+
         </motion.section>
 
         <motion.section
           variants={VARIANTS_SECTION}
           transition={TRANSITION_SECTION}
         >
-          <h3 className="mb-5 text-lg font-medium">Connect</h3>
-          <p className="mb-5 text-zinc-600 dark:text-zinc-400">
-            Feel free to contact me at{' '}
-            <a
-              className="underline dark:text-zinc-300"
-              href={`mailto:${EMAIL}`}
-            >
-              {EMAIL}
-            </a>
-          </p>
-          <div className="flex items-center justify-start space-x-3">
-            {SOCIAL_LINKS.map((link) => (
-              <MagneticSocialLink key={link.label} link={link.link}>
-                {link.label}
-              </MagneticSocialLink>
-            ))}
-          </div>
+
         </motion.section>
       </motion.main>
     </>
