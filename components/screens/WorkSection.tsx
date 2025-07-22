@@ -50,11 +50,10 @@ const WorkSection: React.FC = () => {
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`rounded-full px-6 py-2 text-base font-medium transition-all duration-200 hover:-translate-y-1 ${
-                activeTab === tab
+              className={`rounded-full px-6 py-2 text-base font-medium transition-all duration-200 hover:-translate-y-1 ${activeTab === tab
                   ? 'bg-black text-white hover:opacity-90'
                   : 'bg-gray-200 text-black hover:bg-gray-300'
-              }`}
+                }`}
             >
               {tab}
             </button>
@@ -70,11 +69,11 @@ const WorkSection: React.FC = () => {
           {/* First Project Full Width */}
           {projects.length > 0 && (
             <div key={projects[0].id} className="mb-10">
-              <div className="aspect-[4/3] w-full overflow-hidden rounded-xl">
+              <div className="w-full flex justify-center items-center rounded-xl overflow-hidden border border-gray-200">
                 <img
                   src={projects[0].featured_image}
                   alt={`${projects[0].title} thumbnail`}
-                  className="w-full h-full object-cover rounded-xl transition duration-300 ease-in-out hover:brightness-90 hover:scale-105"
+                  className="w-full h-auto object-contain rounded-xl transition duration-300 ease-in-out hover:brightness-90 hover:scale-105"
                 />
               </div>
               <div className="mt-4">
@@ -88,21 +87,19 @@ const WorkSection: React.FC = () => {
             </div>
           )}
 
-          {/* Remaining Projects in 2-Column Grid */}
+          {/* Remaining Projects Grid */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-10">
             {projects.slice(1).map((project) => (
-              <div key={project.id} className="flex flex-col gap-4">
-                <div className="aspect-[4/3] w-full overflow-hidden rounded-xl">
+              <div key={project.id} className="flex flex-col gap-4 text-left">
+                <div className="w-full overflow-hidden rounded-xl">
                   <img
                     src={project.featured_image}
                     alt={`${project.title} thumbnail`}
-                    className="w-full h-full object-cover rounded-xl transition duration-300 ease-in-out hover:brightness-90 hover:scale-105"
+                    className="w-full h-auto object-contain rounded-xl max-h-[300px] mx-auto"
                   />
                 </div>
                 <div>
-                  <p className="text-xl sm:text-2xl font-semibold text-black">
-                    {project.title} →
-                  </p>
+                  <p className="text-xl sm:text-2xl font-semibold text-black">{project.title} →</p>
                   <p className="text-base sm:text-xl text-gray-700">
                     {project.custom_fields?._template_price?.[0] || 'No subtitle'}
                   </p>
