@@ -1,5 +1,5 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 
 const testimonials = [
   {
@@ -89,81 +89,70 @@ Kernel ended up with a website that converts really well. Working with Bryn is a
 ];
 
 const TestimonialSection: React.FC = () => {
-  const [startIndex, setStartIndex] = useState(0);
-  const [cardsPerPage, setCardsPerPage] = useState(2);
+  const scrollRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    const updateCardsPerPage = () => {
-      setCardsPerPage(window.innerWidth < 768 ? 1 : 2);
-    };
-    updateCardsPerPage();
-    window.addEventListener('resize', updateCardsPerPage);
-    return () => window.removeEventListener('resize', updateCardsPerPage);
-  }, []);
-
-  const total = testimonials.length;
-
-  const visibleTestimonials = Array.from({ length: cardsPerPage }).map(
-    (_, i) => testimonials[(startIndex + i) % total]
-  );
-
-  const handlePrev = () => {
-    setStartIndex((prev) => (prev - cardsPerPage + total) % total);
-  };
-
-  const handleNext = () => {
-    setStartIndex((prev) => (prev + cardsPerPage) % total);
+  const scroll = (direction: 'left' | 'right') => {
+    if (scrollRef.current) {
+      const scrollAmount = 450;
+      scrollRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth',
+      });
+    }
   };
 
   return (
     <section className="px-4 py-20 sm:px-6 md:px-10 lg:px-20 bg-white">
       <div className="mb-6 h-[2px] w-full bg-black" />
-      <h2 className="text-6xl font-semibold text-black mb-12">Testimonials</h2>
+      <h2 className="text-5xl font-semibold text-black mb-10">Testimonials</h2>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {visibleTestimonials.map((t) => (
-          <div
-            key={t.id}
-            className="bg-gray-100 p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300"
-          >
-            <p className="text-[1.25rem] md:text-[1.375rem] text-black leading-relaxed whitespace-pre-line mb-6">
-              {t.text}
-            </p>
-            <div className="flex items-center gap-3">
-              <img
-                src={t.avatar}
-                alt={t.name}
-                className="w-12 h-12 rounded-full object-cover"
-              />
-              <div>
-                <p className="text-lg font-semibold text-black">{t.name}</p>
-                <p className="text-sm text-gray-600">{t.title}</p>
+      {/* Horizontal Scroll Container */}
+      <div className="relative">
+        <div
+          ref={scrollRef}
+          className="flex gap-6 overflow-x-auto scroll-smooth hide-scrollbar pb-4"
+        >
+          {testimonials.map((t) => (
+            <div
+              key={t.id}
+              className="bg-gray-100 p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between h-[420px] min-w-[300px] md:min-w-[490px]"
+            >
+              <p className="text-[1.1rem] md:text-[1.25rem] text-black leading-relaxed whitespace-pre-line mb-6">
+                {t.text}
+              </p>
+              <div className="flex items-center gap-3 mt-auto">
+                <img
+                  src={t.avatar}
+                  alt={t.name}
+                  className="w-12 h-12 rounded-full object-cover"
+                />
+                <div>
+                  <p className="text-lg font-semibold text-black">{t.name}</p>
+                  <p className="text-sm text-gray-600">{t.title}</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
 
-      {/* Navigation Arrows */}
-      <div className="flex justify-center mt-10">
-        <div className="flex items-center gap-6 px-6 py-3 bg-black rounded-full">
-          <button
-            onClick={handlePrev}
-            className="text-white text-xl hover:scale-110 transition"
-          >
-            ←
-          </button>
-          <button
-            onClick={handleNext}
-            className="text-white text-xl hover:scale-110 transition"
-          >
-            →
-          </button>
+        {/* Arrows */}
+        <div className="flex justify-center mt-8">
+          <div className="flex items-center gap-6 px-6 py-3 bg-black rounded-full">
+            <button
+              onClick={() => scroll('left')}
+              className="text-white text-xl hover:scale-110 transition"
+            >
+              ←
+            </button>
+            <button
+              onClick={() => scroll('right')}
+              className="text-white text-xl hover:scale-110 transition"
+            >
+              →
+            </button>
+          </div>
         </div>
       </div>
-
-      <div className="h-30 bg-white" />
-
     </section>
   );
 };

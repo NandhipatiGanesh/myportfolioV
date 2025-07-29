@@ -9,7 +9,7 @@ const VenturesSection: React.FC = () => {
 
       {/* Heading */}
       <div className="mb-10">
-        <h2 className="text-6xl font-semibold text-black">Ventures</h2>
+        <h2 className="text-6xl font-semibold text-black">Wordpress</h2>
       </div>
 
       {/* Spacer below heading */}

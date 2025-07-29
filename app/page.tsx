@@ -193,7 +193,6 @@ export default function Personal() {
 
       <ServicesSection />
 
-      <InterestsSection />
 
       <GetInTouchSection />
 

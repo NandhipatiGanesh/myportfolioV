@@ -51,7 +51,7 @@ const Header: React.FC<HeaderProps> = ({ currentColor }) => {
       <div className="flex items-start justify-between px-6 pt-2 pb-4 h-[60px]">
         {/* Logo */}
         <div className="ml-[70px] mt-[3px] text-[44px] font-bold text-black rotate-45 transition-transform duration-300 hover:rotate-0 leading-none">
-          B
+          G
         </div>
 
         {/* Desktop Navigation */}

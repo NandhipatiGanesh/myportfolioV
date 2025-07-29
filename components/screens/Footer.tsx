@@ -27,13 +27,13 @@ const Footer = () => {
                 {/* Rotated B Icon */}
                 <div>
                     <p className="text-5xl font-bold transform rotate-[45deg] hover:rotate-0 transition-transform duration-500 cursor-pointer">
-                        B
+                        G
                     </p>
                 </div>
 
                 {/* Description */}
                 <div className="text-3xl font-semibold text-center md:text-left max-w-xl">
-                    <p>I’m Bryn — a freelance product and website designer based in Copenhagen</p>
+                    <p>I’m Ganesh — a freelance web developer and mobile application developer based in Hyderabad</p>
                 </div>
 
                 {/* Buttons */}
@@ -133,7 +133,7 @@ const Footer = () => {
                         ))}
                         {/* Footer Note */}
                         <div className="text-m text-gray-600 mt-10">
-                            ©{currentYear} to ∞ Bryn Taylor
+                            ©{currentYear} to ∞ Ganesh
                         </div>
                     </div>
                 </div>

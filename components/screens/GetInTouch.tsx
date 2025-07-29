@@ -53,7 +53,7 @@ const GetInTouchSection: React.FC = () => {
             <span className="underline underline-offset-2">custom icon set</span> for your business.
           </p>
           <p>
-            Currently based in Copenhagen, Denmark — available for remote-friendly work.
+            Currently based in Hyderabad, India — available for remote-friendly work.
           </p><br /><br />
 
           {/* Buttons */}

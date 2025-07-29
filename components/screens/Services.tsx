@@ -9,22 +9,22 @@ const services = [
   },
   {
     id: 2,
-    title: 'Digital product design →',
+    title: 'Custom application development →',
     image: '/images/services/pleo-product.jpg',
   },
   {
     id: 3,
-    title: 'Webflow development →',
+    title: 'Mobile application development →',
     image: '/images/services/marketing-website.jpg',
   },
   {
     id: 4,
-    title: 'Framer development →',
+    title: 'Wordpress development →',
     image: '/images/services/website-template.jpg',
   },
   {
     id: 5,
-    title: 'Icon design →',
+    title: 'Social Media →',
     image: '/images/services/minimal-icons.jpg',
   },
 ];
