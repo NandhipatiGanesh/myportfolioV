@@ -21,7 +21,7 @@ const Footer = () => {
     );
 
     return (
-        <footer className="bg-[#f5f5f5] transition-colors duration-500 group-hover:bg-[#fceef9] px-4 sm:px-6 md:px-10 lg:px-20 py-20 text-black">
+        <footer className="bg-[#f5f5f5] transition-colors duration-500 group-hover:bg-[#fceef9] px-4 sm:px-6 md:px-10 lg:px-20 py-10 text-black">
             {/* Top Section */}
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-10 gap-6">
                 {/* Rotated B Icon */}
@@ -56,7 +56,7 @@ const Footer = () => {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:ml-[16.3%]">
                     {/* Column 1 */}
                     <div>
-                        <p className="text-gray-500 font-semibold mb-3">Webflow templates</p>
+                        <p className="text-gray-500 font-semibold mb-3">Wordpress</p>
                         {[
                             { name: 'Lucide', img: '/images/icons/lucide.jpg' },
                             { name: 'Monograph', img: '/images/icons/monograph.jpg' },
@@ -73,7 +73,7 @@ const Footer = () => {
 
                     {/* Column 2 */}
                     <div>
-                        <p className="text-gray-500 font-semibold mb-3">Framer templates</p>
+                        <p className="text-gray-500 font-semibold mb-3">Dashboards</p>
                         {[
                             { name: 'Last Studio', img: '/images/icons/last-studio.jpg' },
                             { name: 'Unlimited Access', img: '/images/icons/unlimited access.png' },
@@ -94,7 +94,7 @@ const Footer = () => {
 
                     {/* Column 3 */}
                     <div>
-                        <p className="text-gray-500 font-semibold mb-3">Use my portfolio</p>
+                        <p className="text-gray-500 font-semibold mb-3">Mobile Apps</p>
                         {[
                             { name: 'Clone in Webflow', img: '/images/icons/clone.svg' },
                             { name: 'Remix in Framer', img: '/images/icons/remix.svg' },
@@ -127,7 +127,7 @@ const Footer = () => {
 
                     {/* Column 6 */}
                     <div>
-                        <p className="text-gray-500 font-semibold mb-3">Other</p>
+                        <p className="text-gray-500 font-semibold">Other</p>
                         {['Tools I use', 'Built in Webflow'].map((item) => (
                             <div key={item} className="mt-1 text-lg font-medium">{renderTextWithWave(item)}</div>
                         ))}

@@ -203,7 +203,7 @@ export default function Personal() {
 
 
       <motion.main
-        className="space-y-24"
+        className=""
         variants={VARIANTS_CONTAINER}
         initial="hidden"
         animate="visible"
