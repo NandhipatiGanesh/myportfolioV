@@ -106,7 +106,7 @@ const ExperienceSection: React.FC = () => {
         </div>
 
         {/* Bottom Spacer */}
-        <div className="h-20 bg-white" />
+        
       </div>
     </section>
   );

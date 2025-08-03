@@ -24,12 +24,14 @@ const Footer = () => {
         <footer className="bg-[#f5f5f5] transition-colors duration-500 group-hover:bg-[#fceef9] px-4 sm:px-6 md:px-10 lg:px-20 py-10 text-black">
             {/* Top Section */}
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-10 gap-6">
-                {/* Rotated B Icon */}
-                <div>
+                {/* Rotated G Icon */}
+                {/* Rotated G Icon */}
+                <div className="w-full md:w-auto flex justify-center md:justify-start">
                     <p className="text-5xl font-bold transform rotate-[45deg] hover:rotate-0 transition-transform duration-500 cursor-pointer">
                         G
                     </p>
                 </div>
+
 
                 {/* Description */}
                 <div className="text-3xl font-semibold text-center md:text-left max-w-xl">
@@ -37,7 +39,8 @@ const Footer = () => {
                 </div>
 
                 {/* Buttons */}
-                <div className="flex gap-3">
+                {/* Buttons */}
+                <div className="w-full md:w-auto flex justify-center md:justify-end gap-3">
                     <button className="px-4 py-3 bg-white border rounded-lg font-medium hover:-translate-y-1 transition">
                         Copy email
                     </button>
@@ -45,6 +48,7 @@ const Footer = () => {
                         Email me →
                     </button>
                 </div>
+
             </div><br />
 
             {/* Divider */}
@@ -58,11 +62,11 @@ const Footer = () => {
                     <div>
                         <p className="text-gray-500 font-semibold mb-3">Wordpress</p>
                         {[
-                            { name: 'Lucide', img: '/images/icons/lucide.jpg' },
-                            { name: 'Monograph', img: '/images/icons/monograph.jpg' },
-                            { name: 'Landon', img: '/images/icons/landon.jpg' },
-                            { name: 'Fern', img: '/images/icons/fern.jpg' },
-                            { name: 'Torch', img: '/images/icons/torch.jpg' },
+                            { name: 'The Fallen', img: '/images/ventures/the fallen.png' },
+                            { name: 'Capital Flasher', img: '/images/ventures/capital flasher.png' },
+                            { name: 'Money Printers', img: '/images/ventures/money printers.png' },
+                            { name: 'Flash Zone', img: '/images/ventures/flash zone.png' },
+                            { name: 'Simula', img: '/images/ventures/simula.png' },
                         ].map((item) => (
                             <div key={item.name} className="flex text-lg font-medium items-center gap-2 mt-3">
                                 <img src={item.img} alt={item.name} className="w-8 h-8 rounded-sm" />
@@ -75,11 +79,11 @@ const Footer = () => {
                     <div>
                         <p className="text-gray-500 font-semibold mb-3">Dashboards</p>
                         {[
-                            { name: 'Last Studio', img: '/images/icons/last-studio.jpg' },
-                            { name: 'Unlimited Access', img: '/images/icons/unlimited access.png' },
-                            { name: 'Collective', img: '/images/icons/collective.jpg' },
-                            { name: 'Narrate', img: '/images/icons/narrate.jpg' },
-                            { name: 'Assemble', img: '/images/icons/assemble.jpg' },
+                            { name: 'Web Dashboard', img: '/images/work/dashboard.webp' },
+                            //{ name: 'Unlimited Access', img: '/images/icons/unlimited access.png' },
+                            //{ name: 'Collective', img: '/images/icons/collective.jpg' },
+                            //{ name: 'Narrate', img: '/images/icons/narrate.jpg' },
+                            //{ name: 'Assemble', img: '/images/icons/assemble.jpg' },
                         ].map((item) => (
                             <div key={item.name} className="flex text-lg font-medium items-center gap-2 mt-3">
                                 <img src={item.img} alt={item.name} className="w-8 h-8 rounded-sm" />
@@ -96,8 +100,8 @@ const Footer = () => {
                     <div>
                         <p className="text-gray-500 font-semibold mb-3">Mobile Apps</p>
                         {[
-                            { name: 'Clone in Webflow', img: '/images/icons/clone.svg' },
-                            { name: 'Remix in Framer', img: '/images/icons/remix.svg' },
+                            { name: 'Good Garms', img: '/images/ventures/good-garms.jpg' },
+                            { name: 'A1', img: '/images/ventures/A1.png' },
                         ].map((item) => (
                             <div key={item.name} className="flex text-lg font-medium items-center gap-2 mt-3">
                                 <img src={item.img} alt={item.name} className="w-8 h-8 rounded-sm" />

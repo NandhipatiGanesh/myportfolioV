@@ -60,7 +60,7 @@ const ServicesSection: React.FC = () => {
         ))}
       </div>
 
-      <div className="h-20 bg-white" />
+      
     </section>
   );
 };

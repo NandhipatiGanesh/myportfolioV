@@ -80,7 +80,7 @@ const AboutMe: React.FC = () => {
           </p>
         </div>
       </div>
-      <div className="h-30 bg-white" />
+      
     </section>
   );
 };

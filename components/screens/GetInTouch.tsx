@@ -82,7 +82,7 @@ const GetInTouchSection: React.FC = () => {
           ))}
         </div>
       </div>
-      <div className="h-20 bg-white" />
+      
     </section>
   );
 };

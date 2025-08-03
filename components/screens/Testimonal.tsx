@@ -107,7 +107,7 @@ const TestimonialSection: React.FC = () => {
       <h2 className="text-5xl font-semibold text-black mb-10">Testimonials</h2>
 
       {/* Horizontal Scroll Container */}
-      <div className="relative">
+      <div className="relative -mx-4 sm:-mx-6 md:-mx-10 lg:-mx-20">
         <div
           ref={scrollRef}
           className="flex gap-6 overflow-x-auto scroll-smooth hide-scrollbar pb-4"
