@@ -65,7 +65,7 @@ const Header: React.FC<HeaderProps> = ({ currentColor }) => {
             ))}
             <a
               href="mailto:your@email.com"
-              className="rounded-md bg-black px-3 py-[6px] text-white text-[13px] transition transform hover:-translate-y-1 hover:opacity-90"
+              className="rounded-md bg-black px-3 py-1 text-white text-[13px] transition transform hover:-translate-y-1 hover:opacity-90"
             >
               Email me →
             </a>
@@ -116,7 +116,7 @@ const Header: React.FC<HeaderProps> = ({ currentColor }) => {
 
             <a
               href="mailto:your@email.com"
-              className="rounded-md bg-black px-30 py-[6px] text-white text-[13px] transition hover:opacity-90"
+              className="rounded-md bg-black px-30 py-3 text-white text-[13px] transition hover:opacity-90"
               onClick={() => setIsOpen(false)}
             >
               Email me →

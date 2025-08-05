@@ -33,7 +33,7 @@ const AboutSection: React.FC = () => {
         <br />
 
         <p className="mb-3 text-[28px] leading-[1.2] font-normal">
-          Most recently, crafting custom WordPress sites for clients.{' '}
+          Most recently, crafting custom Dashboards for clients.{' '}
           <span className="font-semibold underline decoration-gray-300 underline-offset-4">
             {renderTextWithWave('')}
           </span>

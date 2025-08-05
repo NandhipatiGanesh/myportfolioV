@@ -69,7 +69,7 @@ const Footer = () => {
                             { name: 'Simula', img: '/images/ventures/simula.png' },
                         ].map((item) => (
                             <div key={item.name} className="flex text-lg font-medium items-center gap-2 mt-3">
-                                <img src={item.img} alt={item.name} className="w-8 h-8 rounded-sm" />
+                                <img src={item.img} alt={item.name} className="w-8 h-8 object-cover rounded-sm" />
                                 {renderTextWithWave(item.name)}
                             </div>
                         ))}
@@ -86,14 +86,14 @@ const Footer = () => {
                             //{ name: 'Assemble', img: '/images/icons/assemble.jpg' },
                         ].map((item) => (
                             <div key={item.name} className="flex text-lg font-medium items-center gap-2 mt-3">
-                                <img src={item.img} alt={item.name} className="w-8 h-8 rounded-sm" />
+                                <img src={item.img} alt={item.name} className="w-8 h-8 object-cover  rounded-sm" />
                                 {renderTextWithWave(item.name)}
                             </div>
                         ))}
-                        <div className="flex text-lg font-medium items-center gap-2 mt-10">
+                        {/* <div className="flex text-lg font-medium items-center gap-2 mt-10">
                             <img src="/images/icons/become-affilate.svg" alt="affiliate" className="w-8 h-8 rounded-sm" />
                             {renderTextWithWave('Become an affiliate')}
-                        </div>
+                        </div> */}
                     </div>
 
                     {/* Column 3 */}
@@ -104,7 +104,7 @@ const Footer = () => {
                             { name: 'A1', img: '/images/ventures/A1.png' },
                         ].map((item) => (
                             <div key={item.name} className="flex text-lg font-medium items-center gap-2 mt-3">
-                                <img src={item.img} alt={item.name} className="w-8 h-8 rounded-sm" />
+                                <img src={item.img} alt={item.name} className="w-8 h-8 object-cover rounded-sm" />
                                 {renderTextWithWave(item.name)}
                             </div>
                         ))}
