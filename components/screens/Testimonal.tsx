@@ -92,13 +92,12 @@ const TestimonialSection: React.FC = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: 'left' | 'right') => {
-    if (scrollRef.current) {
-      const scrollAmount = 450;
-      scrollRef.current.scrollBy({
-        left: direction === 'left' ? -scrollAmount : scrollAmount,
-        behavior: 'smooth',
-      });
-    }
+    if (!scrollRef.current) return;
+    const amount = 450;
+    scrollRef.current.scrollBy({
+      left: direction === 'left' ? -amount : amount,
+      behavior: 'smooth',
+    });
   };
 
   return (
@@ -106,16 +105,25 @@ const TestimonialSection: React.FC = () => {
       <div className="mb-6 h-[2px] w-full bg-black" />
       <h2 className="text-5xl font-semibold text-black mb-10">Testimonials</h2>
 
-      {/* Horizontal Scroll Container */}
-      <div className="relative -mx-4 sm:-mx-6 md:-mx-10 lg:-mx-20">
+      {/* Full‑bleed only on md+ so mobile stays aligned under the heading */}
+      <div className="md:-mx-10 lg:-mx-20">
         <div
           ref={scrollRef}
-          className="flex gap-6 overflow-x-auto scroll-smooth hide-scrollbar pb-4"
+          className="
+            flex gap-6 overflow-x-auto scroll-smooth hide-scrollbar pb-4
+            px-4 md:px-0          /* mobile padding keeps cards centered under heading */
+            snap-x snap-mandatory /* optional: nicer snapping while scrolling */
+          "
         >
           {testimonials.map((t) => (
             <div
               key={t.id}
-              className="bg-gray-100 p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300 flex flex-col justify-between h-[420px] min-w-[300px] md:min-w-[490px]"
+              className="
+                bg-gray-100 p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300
+                flex flex-col justify-between h-[420px]
+                min-w-[85vw] sm:min-w-[420px] md:min-w-[490px]  /* wider on mobile so it feels centered */
+                snap-start
+              "
             >
               <p className="text-[1.1rem] md:text-[1.25rem] text-black leading-relaxed whitespace-pre-line mb-6">
                 {t.text}
@@ -138,16 +146,10 @@ const TestimonialSection: React.FC = () => {
         {/* Arrows */}
         <div className="flex justify-center mt-8">
           <div className="flex items-center gap-6 px-6 py-3 bg-black rounded-full">
-            <button
-              onClick={() => scroll('left')}
-              className="text-white text-xl hover:scale-110 transition"
-            >
+            <button onClick={() => scroll('left')} className="text-white text-xl hover:scale-110 transition">
               ←
             </button>
-            <button
-              onClick={() => scroll('right')}
-              className="text-white text-xl hover:scale-110 transition"
-            >
+            <button onClick={() => scroll('right')} className="text-white text-xl hover:scale-110 transition">
               →
             </button>
           </div>
