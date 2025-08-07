@@ -53,15 +53,12 @@ const WritingSection: React.FC = () => {
       {/* Right Column (Scrollable Content) */}
       <div className="w-full md:w-3/5 px-4 sm:px-6 md:px-10 lg:px-20 py-10 md:py-20 space-y-14">
         {/* Filter Buttons */}
-        <div className="flex gap-3 mb-10"
-        style={{
-          overflow: 'scroll'
-        }}>
+        <div className="flex gap-3 mb-10">
           {filters.map((filter) => (
             <button
               key={filter}
               onClick={() => setActiveTab(filter)}
-              className={`whitespace-nowrap rounded-full px-6 py-2 text-base font-medium transition-all duration-200 transform hover:-translate-y-1 cursor-pointer ${activeTab === filter
+              className={`whitespace-nowrap rounded-full px-6 py-2 text-base font-medium transition-all duration-200 transform hover:-translate-y-1 ${activeTab === filter
                   ? 'bg-black text-white hover:opacity-90'
                   : 'bg-gray-200 text-black hover:bg-gray-300'
                 }`}

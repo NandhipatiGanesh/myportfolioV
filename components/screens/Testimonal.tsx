@@ -88,6 +88,7 @@ Kernel ended up with a website that converts really well. Working with Bryn is a
   },
 ];
 
+
 const TestimonialSection: React.FC = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -109,23 +110,32 @@ const TestimonialSection: React.FC = () => {
       <div className="md:-mx-10 lg:-mx-20">
         <div
           ref={scrollRef}
-          className="
-            flex gap-6 overflow-x-auto scroll-smooth hide-scrollbar pb-4
-            px-4 md:px-0          /* mobile padding keeps cards centered under heading */
-            snap-x snap-mandatory /* optional: nicer snapping while scrolling */
-          "
+          className={`
+            flex gap-6 overflow-x-auto scroll-smooth pb-4
+            px-4 md:px-0
+            snap-x snap-mandatory
+            [-ms-overflow-style:none] [scrollbar-width:none]
+          `}
         >
+          {/* hide scrollbar for webkit */}
+          <style jsx>{`
+            div::-webkit-scrollbar {
+              display: none;
+            }
+          `}</style>
+
           {testimonials.map((t) => (
             <div
               key={t.id}
-              className="
+              className={`
                 bg-gray-100 p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300
-                flex flex-col justify-between h-[420px]
-                min-w-[85vw] sm:min-w-[420px] md:min-w-[490px]  /* wider on mobile so it feels centered */
+                flex flex-col justify-between
+                h-auto md:h-[420px]
+                min-w-[85vw] sm:min-w-[420px] md:min-w-[490px]
                 snap-start
-              "
+              `}
             >
-              <p className="text-[1.1rem] md:text-[1.25rem] text-black leading-relaxed whitespace-pre-line mb-6">
+              <p className="text-[1.05rem] md:text-[1.25rem] text-black leading-relaxed whitespace-pre-line mb-6">
                 {t.text}
               </p>
               <div className="flex items-center gap-3 mt-auto">
@@ -146,10 +156,18 @@ const TestimonialSection: React.FC = () => {
         {/* Arrows */}
         <div className="flex justify-center mt-8">
           <div className="flex items-center gap-6 px-6 py-3 bg-black rounded-full">
-            <button onClick={() => scroll('left')} className="text-white text-xl hover:scale-110 transition">
+            <button
+              onClick={() => scroll('left')}
+              className="text-white text-xl hover:scale-110 transition"
+              aria-label="Scroll testimonials left"
+            >
               ←
             </button>
-            <button onClick={() => scroll('right')} className="text-white text-xl hover:scale-110 transition">
+            <button
+              onClick={() => scroll('right')}
+              className="text-white text-xl hover:scale-110 transition"
+              aria-label="Scroll testimonials right"
+            >
               →
             </button>
           </div>
