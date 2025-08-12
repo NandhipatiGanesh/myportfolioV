@@ -41,16 +41,18 @@ const Header: React.FC<HeaderProps> = ({ currentColor }) => {
     <>
       {/* Header */}
       <header
-        className={`z-50 w-full transition-all duration-300 ${
-          isSticky ? 'fixed top-0' : 'relative'
-        }`}
+        className={`z-50 w-full transition-all duration-300 ${isSticky ? 'fixed top-0' : 'relative'
+          }`}
         style={{ backgroundColor: currentColor }}
       >
         <div className="flex items-start justify-between px-6 pt-2 pb-4 h-[60px]">
           {/* Logo */}
-          <div className="ml-[12px] mt-[3px] text-[44px] font-bold text-black rotate-45 transition-transform duration-300 hover:rotate-0 leading-none">
+          <div className="ml-[12px] text-[44px] font-bold text-black rotate-45 transition-transform duration-300 hover:rotate-0 leading-none self-center md:self-start">
             G
           </div>
+
+
+
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-start mt-[12px] mr-[100px] space-x-6 font-[520] text-[18px]">
@@ -101,7 +103,7 @@ const Header: React.FC<HeaderProps> = ({ currentColor }) => {
         <div className="md:hidden fixed top-[60px] left-0 w-full h-[calc(100vh-60px)] z-40 bg-white bg-opacity-90 backdrop-blur overflow-y-auto">
           <div className="flex flex-col items-center pt-20 pb-12 space-y-6">
             {/* Logo in Menu */}
-            
+
 
             {navItems.map((item) => (
               <a
