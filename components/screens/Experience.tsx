@@ -16,55 +16,6 @@ const experiences = [
     date: 'July 2023 → Today',
     logo: '/images/experience/freelance-logo.svg',
   },
-  {
-    id: 3,
-    company: 'Pleo',
-    role: 'Senior product designer',
-    date: 'October 2020 → July 2021',
-    logo: '/images/experience/pleo-logo.svg',
-  },
-  {
-    id: 4,
-    company: 'Good Garms',
-    role: 'Co-founder',
-    date: 'March 2020 → Today',
-    logo: '/images/experience/good-garms-logo.svg',
-  },
-  {
-    id: 5,
-    company: 'Monzo',
-    role: 'Product designer',
-    date: 'April 2018 → August 2020',
-    logo: '/images/experience/monzo-logo.svg',
-  },
-  {
-    id: 6,
-    company: 'Thriva',
-    role: 'Senior product designer',
-    date: 'July 2017 → April 2018',
-    logo: '/images/experience/thriva-logo.svg',
-  },
-  {
-    id: 7,
-    company: 'Great Fridays (EPAM)',
-    role: 'Senior visual designer',
-    date: 'November 2014 → June 2017',
-    logo: '/images/experience/great-fridays-logo.svg',
-  },
-  {
-    id: 8,
-    company: 'Morrisons Digital',
-    role: 'Freelance digital designer',
-    date: 'July 2014 → October 2014',
-    logo: '/images/experience/morrisons-logo.svg',
-  },
-  {
-    id: 9,
-    company: 'Firedog',
-    role: 'Junior digital designer',
-    date: 'October 2010 → June 2013',
-    logo: '/images/experience/firedog-logo.jpg',
-  },
 ];
 
 const ExperienceSection: React.FC = () => {

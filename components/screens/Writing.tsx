@@ -35,7 +35,7 @@ const writings = [
   },
 ];
 
-const filters = ['Blog posts', 'Interviews', 'Side projects'];
+const filters = ['Blog posts', 'Side projects'];
 
 const WritingSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState('Blog posts');
@@ -53,7 +53,7 @@ const WritingSection: React.FC = () => {
       {/* Right Column (Scrollable Content) */}
       <div className="w-full md:w-3/5 px-4 sm:px-6 md:px-10 lg:px-20 py-10 md:py-20 space-y-14">
         {/* Filter Buttons */}
-        <div className="flex gap-3 mb-10 overflow-y-scroll">
+        <div className="flex gap-3 mb-10">
           {filters.map((filter) => (
             <button
               key={filter}
