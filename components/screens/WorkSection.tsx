@@ -43,6 +43,24 @@ const webProjects: Template[] = [
     },
     source: 'web',
   },
+  {
+    id: 2002,
+    title: 'Chatbot Dashboard',
+    featured_image: 'https://webcomponents.blog/wp-content/uploads/2025/07/Download-This-Free-PersonalGPT-Chat-UI-%E2%80%93-Open-Source-Next.js-Template.webp',
+    custom_fields: {
+      _template_price: ['Personal chatbot ui design with authenication'],
+    },
+    source: 'web',
+  },
+  {
+    id: 2003,
+    title: 'Free web Components',
+    featured_image: '/images/work/freecomponents.jpg',
+    custom_fields: {
+      _template_price: ['Components Dashboard'],
+    },
+    source: 'web',
+  }
 
 ];
 
@@ -93,9 +111,7 @@ const WorkSection: React.FC = () => {
           </div>
           <div className="mt-4">
             <p className="text-2xl font-semibold text-black">{projects[0].title} →</p>
-            <p className="text-xl text-gray-700">
-              {projects[0].custom_fields?._template_price?.[0] || 'No subtitle'}
-            </p>
+            
           </div>
         </div>
       )}
@@ -108,14 +124,12 @@ const WorkSection: React.FC = () => {
               <img
                 src={project.featured_image}
                 alt={`${project.title} thumbnail`}
-                className="w-full h-auto object-contain rounded-xl transition duration-300 ease-in-out hover:brightness-90 hover:scale-105 max-h-[300px] mx-auto"
+                className="w-full h-auto object-fill rounded-xl transition duration-300 ease-in-out hover:brightness-90 hover:scale-105 max-h-[400px] mx-auto"
               />
             </div>
             <div>
               <p className="text-xl sm:text-2xl font-semibold text-black">{project.title} →</p>
-              <p className="text-base sm:text-xl text-gray-700">
-                {project.custom_fields?._template_price?.[0] || 'No subtitle'}
-              </p>
+              
             </div>
           </div>
         ))}

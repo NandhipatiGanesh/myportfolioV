@@ -80,8 +80,8 @@ const Footer = () => {
                         <p className="text-gray-500 font-semibold mb-3">Dashboards</p>
                         {[
                             { name: 'Web Dashboard', img: '/images/work/dashboard.webp' },
-                            //{ name: 'Unlimited Access', img: '/images/icons/unlimited access.png' },
-                            //{ name: 'Collective', img: '/images/icons/collective.jpg' },
+                            { name: 'Free Components', img: '/images/work/freecomponents.jpg' },
+                            { name: 'GPT Template', img: 'https://webcomponents.blog/wp-content/uploads/2025/07/Download-This-Free-PersonalGPT-Chat-UI-%E2%80%93-Open-Source-Next.js-Template.webp' },
                             //{ name: 'Narrate', img: '/images/icons/narrate.jpg' },
                             //{ name: 'Assemble', img: '/images/icons/assemble.jpg' },
                         ].map((item) => (
