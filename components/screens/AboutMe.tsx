@@ -29,7 +29,7 @@ const AboutMe: React.FC = () => {
         {/* Left Column – 50% */}
         <div className="md:w-1/2 space-y-6">
           <p className="text-4xl text-black font-medium leading-snug">
-            I’m Ganesh — a freelance web developer and mobile application developer with over 3 years of experience.
+            I’m Ganesh — a freelance web and mobile application developer with over 3 years of experience.
             I care a lot about using design for positive impact. Currently based in Hyderabad, India.
           </p>
 

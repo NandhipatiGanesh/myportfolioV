@@ -27,7 +27,7 @@ const AboutSection: React.FC = () => {
     <section className="bg-white text-black min-h-screen w-full px-6 py-20">
       <div className="mx-auto max-w-3xl">
         <p className="mb-6 text-[28px] leading-[1.4] font-normal">
-          Freelance web developer and mobile application developer with over 3 years of experience. Based in Hyderabad. Available for remote-friendly freelance work.
+          Freelance web and mobile application developer with over 3 years of experience. Based in Hyderabad. Available for remote-friendly freelance work.
         </p>
 
         <br />
