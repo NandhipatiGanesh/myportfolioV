@@ -27,31 +27,31 @@ const AboutSection: React.FC = () => {
     <section className="bg-white text-black min-h-screen w-full px-6 py-20">
       <div className="mx-auto max-w-3xl">
         <p className="mb-6 text-[28px] leading-[1.4] font-normal">
-          Freelance senior product and website designer with over 11 years of experience. Based in Copenhagen. Available for remote-friendly freelance work.
+          Freelance web and mobile application developer with over 3 years of experience. Based in Hyderabad. Available for remote-friendly freelance work.
         </p>
 
         <br />
 
         <p className="mb-3 text-[28px] leading-[1.2] font-normal">
-          Most recently at Denmark’s newest unicorn,{' '}
+          Most recently, crafting custom Dashboards for clients.{' '}
           <span className="font-semibold underline decoration-gray-300 underline-offset-4">
-            {renderTextWithWave('Pleo')}
-          </span>.
+            {renderTextWithWave('')}
+          </span>
         </p>
 
         <p className="mb-3 text-[28px] leading-[1.2] font-normal">
-          Previously, at{' '}
+          Previously, built sites using React, Next.js, and Tailwind.{' '}
           <span className="font-semibold underline decoration-gray-300 underline-offset-4">
-            {renderTextWithWave('Monzo')}
+            {renderTextWithWave('')}
           </span>{' '}
-          — the fastest growing bank in the UK.
+          
         </p>
 
         <p className="mb-8 text-[28px] leading-[1.2] font-normal">
-          Before that, the first design hire at{' '}
+          Before that, handled e-Commerce themes and plugin fixes.{' '}
           <span className="font-semibold underline decoration-gray-300 underline-offset-4">
-            {renderTextWithWave('Thriva')}
-          </span>.
+            {renderTextWithWave('')}
+          </span>
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4">

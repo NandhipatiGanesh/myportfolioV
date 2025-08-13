@@ -14,11 +14,11 @@ const Hero: React.FC<HeroProps> = ({ currentColor }) => {
     >
       <div className="ml-[10%] md:ml-[20%]">
         <h1 className="text-4xl font-semibold text-black leading-tight md:text-6xl md:font-bold">
-          Bryn Taylor
+          Ganesh
           <br />
-          <span className="whitespace-nowrap">Freelance product</span>
+          <span className="whitespace-nowrap">Freelance web</span>
           <br />
-          designer
+          developer
         </h1>
       </div>
     </section>

@@ -29,8 +29,8 @@ const AboutMe: React.FC = () => {
         {/* Left Column – 50% */}
         <div className="md:w-1/2 space-y-6">
           <p className="text-4xl text-black font-medium leading-snug">
-            I’m Bryn — a freelance digital product and website designer with over 11 years of experience.
-            I care a lot about using design for positive impact. Currently based in Copenhagen, Denmark.
+            I’m Ganesh — a freelance web and mobile application developer with over 3 years of experience.
+            I care a lot about using design for positive impact. Currently based in Hyderabad, India.
           </p>
 
           <img
@@ -43,46 +43,44 @@ const AboutMe: React.FC = () => {
         {/* Right Column – 50% */}
         <div className="md:w-1/2 space-y-6 text-2xl font-medium text-black leading-snug">
           <p>
-            I was most recently working at{' '}
+            I’m a passionate full-stack developer from Hyderabad, India with a deep love for building exceptional digital experiences. With expertise in web design, mobile app development, WordPress development, and custom applications, I specialize in turning ideas into elegant, high-performing products that are both user-friendly and business-driven.{' '}
             <span className="font-semibold underline decoration-gray-300 underline-offset-4">
-              {renderTextWithWave('Pleo')}
+              {renderTextWithWave('')}
             </span>
-            , Denmark’s newest unicorn. They raised the biggest Series C Denmark has seen.
-            Before that I worked for{' '}
+              {' '}
             <span className="font-semibold underline decoration-gray-300 underline-offset-4">
-              {renderTextWithWave('Monzo')}
+              {renderTextWithWave('')}
             </span>
-            , the fastest growing bank in the UK. I led product design for over 4 million customers. I worked
-            across multiple product squads solving complex money problems.
+          
+          </p>
+
+
+          <p>
+            Over the years, I’ve worked with startups, agencies, and enterprises—delivering impactful solutions across industries such as healthcare, e-commerce, education, and finance. Every project I take on is built around clean code, intuitive UX, and scalable architecture—whether it's a dynamic website, a robust mobile app, or a tailored business solution.{' '}
+            <span className="font-semibold underline decoration-gray-300 underline-offset-4">
+              {renderTextWithWave('')}
+            </span>
+          
           </p>
 
           <p>
-            Before Monzo - I was the first design-hire at health startup,{' '}
+            I’m committed to creating not just for today, but for the future. With a mindset rooted in continuous learning and quality delivery, I approach every project with strategy, creativity, and technical precision. Let’s create something extraordinary together.{' '}
             <span className="font-semibold underline decoration-gray-300 underline-offset-4">
-              {renderTextWithWave('Thriva')}
+              {renderTextWithWave('')}
             </span>
-            . I led all of Thriva's design output. From digital products, to test kit packaging, to marketing like their tube campaign. I was the 6th hire and the company grew to 35 whilst there. I played a big part in scaling the product team and processes.
-          </p>
-
-          <p>
-            Over the years I've worked across health, non-profit, design tooling, finance, retail, automotive and
-            telecoms. From early-stage startups like Thriva, to FTSE 100 companies like Morrisons, to hypergrowth businesses like Monzo. I've also worked with some pretty awesome brands like {' '}
+              {' '}
             <span className="font-semibold underline decoration-gray-300 underline-offset-4">
-              {renderTextWithWave('Mastercard')}
-            </span>
-            ,{' '}
-            <span className="font-semibold underline decoration-gray-300 underline-offset-4">
-              {renderTextWithWave('Microsoft')}
+              {renderTextWithWave('')}
             </span>{' '}
-            and{' '}
+              {' '}
             <span className="font-semibold underline decoration-gray-300 underline-offset-4">
-              {renderTextWithWave('Adidas')}
+              {renderTextWithWave('')}
             </span>
-            .
+            
           </p>
         </div>
       </div>
-      <div className="h-30 bg-white" />
+      
     </section>
   );
 };
