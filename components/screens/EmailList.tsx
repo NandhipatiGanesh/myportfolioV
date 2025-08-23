@@ -43,7 +43,7 @@ const EmailListSection: React.FC = () => {
         Join 2,600+ designers · Unsubscribe at any time
       </p>
       
-      <div className="h-20 bg-white" />
+      
     </section>
   );
 };

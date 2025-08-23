@@ -37,6 +37,7 @@ import InterestsSection from '@/components/screens/Interests';
 import GetInTouchSection from '@/components/screens/GetInTouch';
 import EmailListSection from '@/components/screens/EmailList';
 import FooterSection from '@/components/screens/Footer';
+import WooCommerceSection from '@/components/screens/wooCommerce';
 
 const VARIANTS_CONTAINER = {
   hidden: { opacity: 0 },
@@ -153,35 +154,12 @@ export default function Personal() {
       <Hero currentColor={currentColor} />
 
       <AboutSection />
-      <div className="bg-white py-12 border-y border-gray-200">
-        <InfiniteSlider speedOnHover={30} gap={60}> {/* Gap between logos */}
-          {[
-            { src: "/logos/carefree.svg", alt: "Carefree" },
-            { src: "/logos/monzo.svg", alt: "Monzo" },
-            { src: "/logos/mastercard.svg", alt: "Mastercard" },
-            { src: "/logos/pleo.svg", alt: "Pleo" },
-            { src: "/logos/trustpilot.svg", alt: "Trustpilot" },
-            { src: "/logos/fy!.svg", alt: "FY!" },
-            { src: "/logos/morrisons.svg", alt: "Morrisons" },
-            { src: "/logos/thriva.svg", alt: "Thriva" },
-            { src: "/logos/moving brands.svg", alt: "Moving Brands" },
-            { src: "/logos/trust keith.svg", alt: "Trust Keith" },
-          ].map((logo, index) => (
-            <img
-              key={index}
-              src={logo.src}
-              alt={logo.alt}
-              className="h-10 w-auto object-contain mx-20"
-            />
-          ))}
-        </InfiniteSlider>
-      </div>
-
-      <div className="h-30 bg-white"></div>
 
       <WorkSection />
 
       <VenturesSection />
+      
+      <WooCommerceSection />
 
       <TestimonialSection />
 
@@ -193,7 +171,6 @@ export default function Personal() {
 
       <ServicesSection />
 
-      <InterestsSection />
 
       <GetInTouchSection />
 
@@ -204,7 +181,7 @@ export default function Personal() {
 
 
       <motion.main
-        className="space-y-24"
+        className=""
         variants={VARIANTS_CONTAINER}
         initial="hidden"
         animate="visible"

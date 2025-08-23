@@ -35,7 +35,7 @@ const writings = [
   },
 ];
 
-const filters = ['Blog posts', 'Interviews', 'Side projects'];
+const filters = ['Blog posts', 'Side projects'];
 
 const WritingSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState('Blog posts');
@@ -53,19 +53,19 @@ const WritingSection: React.FC = () => {
       {/* Right Column (Scrollable Content) */}
       <div className="w-full md:w-3/5 px-4 sm:px-6 md:px-10 lg:px-20 py-10 md:py-20 space-y-14">
         {/* Filter Buttons */}
-        <div className="flex gap-4 mb-10">
+        <div className="flex gap-3 mb-10">
           {filters.map((filter) => (
             <button
               key={filter}
               onClick={() => setActiveTab(filter)}
-              className={`rounded-full px-6 py-2 text-base font-medium transition-all duration-200 transform hover:-translate-y-1 ${
-                activeTab === filter
+              className={`whitespace-nowrap rounded-full px-6 py-2 text-base font-medium transition-all duration-200 transform hover:-translate-y-1 ${activeTab === filter
                   ? 'bg-black text-white hover:opacity-90'
                   : 'bg-gray-200 text-black hover:bg-gray-300'
-              }`}
+                }`}
             >
               {filter}
             </button>
+
           ))}
         </div>
 
@@ -100,8 +100,7 @@ const WritingSection: React.FC = () => {
         </div>
 
         {/* Bottom spacing */}
-        <div className="mt-20 h-[1px] w-full bg-gray-200" />
-        <div className="h-20 bg-white" />
+
       </div>
     </section>
   );
