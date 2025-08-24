@@ -66,7 +66,7 @@ const GetInTouchSection: React.FC = () => {
             </a>
             <button
               onClick={handleCopy}
-              className="px-6 py-3 rounded-lg border border-gray-300 font-medium hover:bg-gray-100 hover:-translate-y-1 transition transform"
+              className="px-6 py-3 rounded-lg border border-gray-300 font-medium hover:bg-gray-100 hover:-translate-y-1 transition transform cursor-pointer"
             >
               Copy email
             </button>

@@ -42,7 +42,7 @@ export default function RootLayout({
           defaultTheme="system"
         >
           {/* AnnouncementBanner with fixed black bg */}
-          <AnnouncementBanner />
+          
 
           {/* Wrap all animated bg sections here */}
           <div className="animate-bg-cycle min-h-screen transition-colors duration-1000">
