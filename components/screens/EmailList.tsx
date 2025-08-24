@@ -28,11 +28,11 @@ const EmailListSection: React.FC = () => {
           placeholder="Your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="px-6 py-4 border border-gray-300 rounded-lg w-full sm:w-[300px] text-black text-base focus:outline-none"
+          className="px-6 py-4 border border-gray-300 rounded-lg w-full sm:w-[300px] text-black text-base focus:outline-none cursor-pointer"
         />
         <button
           onClick={handleSubscribe}
-          className="bg-black text-white px-6 py-4 rounded-lg font-medium transition transform hover:-translate-y-1 hover:opacity-90"
+          className="bg-black text-white px-6 py-4 rounded-lg font-medium transition transform hover:-translate-y-1 hover:opacity-90 cursor-pointer"
         >
           Subscribe →
         </button>

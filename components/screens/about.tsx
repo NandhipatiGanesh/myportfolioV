@@ -63,7 +63,7 @@ const AboutSection: React.FC = () => {
           </a>
           <button
             onClick={handleCopy}
-            className="rounded-[0.55rem] border border-gray-300 px-8 py-4 text-lg font-medium transition transform hover:-translate-y-1 hover:bg-gray-100 text-center sm:w-auto w-full"
+            className="rounded-[0.55rem] border border-gray-300 px-8 py-4 text-lg font-medium transition transform hover:-translate-y-1 hover:bg-gray-100 text-center sm:w-auto w-full cursor-pointer"
           >
             Copy email
           </button>

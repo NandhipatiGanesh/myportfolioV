@@ -1,5 +1,5 @@
-'use client';
-import React from 'react';
+'use client'
+import React from 'react'
 
 const services = [
   {
@@ -27,42 +27,40 @@ const services = [
     title: 'Social Media →',
     image: '/images/services/minimal-icons.jpg',
   },
-];
+]
 
 const ServicesSection: React.FC = () => {
   return (
     <section className="bg-white px-4 py-20 sm:px-6 md:px-10 lg:px-20">
       {/* Top line and heading */}
       <div className="mb-6 h-[2px] w-full bg-black" />
-      <h2 className="text-6xl font-semibold text-black mb-12">Services</h2>
+      <h2 className="mb-12 text-6xl font-semibold text-black">Services</h2>
 
       {/* Services List */}
       <div className="space-y-10">
         {services.map((service) => (
           <div
             key={service.id}
-            className="border-b border-gray-200 pb-6"
+            className="cursor-pointer border-b border-gray-200 p-2 pb-6 hover:bg-gray-50 md:p-4 lg:p-4 rounded-lg transition duraton-200"
           >
-            <div className="flex flex-col md:flex-row md:items-center gap-6">
+            <div className="flex flex-col gap-6 md:flex-row md:items-center">
               {/* Image */}
               <img
                 src={service.image}
                 alt={service.title}
-                className="w-full md:w-48 h-32 object-cover rounded-lg"
+                className="h-32 w-full rounded-lg object-cover md:w-48"
               />
 
               {/* Title */}
-              <p className="text-4xl md:text-5xl font-semibold text-black md:max-w-md">
+              <p className="text-3xl font-semibold text-black md:text-4xl">
                 {service.title}
               </p>
             </div>
           </div>
         ))}
       </div>
-
-      
     </section>
-  );
-};
+  )
+}
 
-export default ServicesSection;
+export default ServicesSection
