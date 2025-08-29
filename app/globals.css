@@ -89,3 +89,6 @@ html {
 .hide-scrollbar::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
 }
+body{
+  background-color: #000000;
+}
