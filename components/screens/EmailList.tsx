@@ -1,38 +1,56 @@
-'use client';
-import React, { useState } from 'react';
+'use client'
+import React, { useState } from 'react'
+import SplitText from '@/app/components/TextAnimations/SplitText/SplitText'
 
 const EmailListSection: React.FC = () => {
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState('')
 
   const handleSubscribe = () => {
     // Placeholder for form submission logic
-    alert(`Subscribed with ${email}`);
-  };
-
+    alert(`Subscribed with ${email}`)
+  }
+  const handleAnimationComplete = () => {
+    console.log('All letters have animated!')
+  }
   return (
-    <section className="bg-white px-4 py-20 sm:px-6 md:px-10 lg:px-20">
+    <section className="bg-black px-4 py-20 sm:px-6 md:px-10 lg:px-20">
       {/* Top Line */}
       <div className="mb-4 h-[2px] w-full bg-black" />
       {/* Heading */}
-      <h2 className="text-6xl font-semibold text-black mb-10">Email list</h2><br /><br />
+      <SplitText
+        text="Email list"
+        className="mb-10 text-6xl font-semibold text-gray-200"
+        delay={100}
+        duration={0.6}
+        ease="power3.out"
+        splitType="chars"
+        from={{ opacity: 0, y: 40 }}
+        to={{ opacity: 1, y: 0 }}
+        threshold={0.1}
+        rootMargin="-100px"
+        textAlign="center"
+        onLetterAnimationComplete={handleAnimationComplete}
+      />
+      <br />
+      <br />
 
       {/* Subheading */}
-      <h3 className="text-5xl sm:text-7xl font-bold text-black leading-tight max-w-5xl mb-10 md:w-3/5">
+      <h3 className="mb-10 max-w-5xl text-5xl leading-tight font-bold text-gray-200 sm:text-7xl md:w-3/5">
         Get design insights and articles straight to your inbox
       </h3>
 
       {/* Input and button */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-4">
+      <div className="mb-4 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
         <input
           type="email"
           placeholder="Your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="px-6 py-4 border border-gray-300 rounded-lg w-full sm:w-[300px] text-black text-base focus:outline-none cursor-pointer"
+          className="cursor-pointer rounded-full border border-white/30 bg-white/10 px-10 py-3 font-medium text-white backdrop-blur-md transition  focus:outline-none sm:w-[300px]"
         />
         <button
           onClick={handleSubscribe}
-          className="bg-black text-white px-6 py-4 rounded-lg font-medium transition transform hover:-translate-y-1 hover:opacity-90 cursor-pointer"
+          className="cursor-pointer rounded-full border border-white/30 bg-white/10 px-10 py-3 font-medium text-white backdrop-blur-md transition hover:-translate-y-1 hover:opacity-90"
         >
           Subscribe →
         </button>
@@ -42,10 +60,8 @@ const EmailListSection: React.FC = () => {
       <p className="text-base text-gray-500">
         Join 2,600+ designers · Unsubscribe at any time
       </p>
-      
-      
     </section>
-  );
-};
+  )
+}
 
-export default EmailListSection;
+export default EmailListSection

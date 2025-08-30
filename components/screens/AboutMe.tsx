@@ -22,16 +22,16 @@ const AboutMe: React.FC = () => {
     console.log('Animation completed!')
   }
   return (
-    <section className="bg-white px-4 py-20 sm:px-6 md:px-10 lg:px-20">
+    <section className="bg-black px-4 py-20 sm:px-6 md:px-10 lg:px-20">
       {/* Top Line & Heading */}
-      <div className="mb-6 h-[2px] w-full bg-black" />
+      <div className="mb-6 h-[2px] w-full bg-gray-500" />
       <BlurText
         text="About"
         delay={150}
         animateBy="words"
         direction="top"
         onAnimationComplete={handleAnimationComplete}
-        className="mb-12 text-6xl font-semibold text-black"
+        className="mb-12 text-6xl font-semibold text-gray-200"
       />
       <br />
       <br />
@@ -47,7 +47,7 @@ const AboutMe: React.FC = () => {
             animateBy="words"
             direction="top"
             onAnimationComplete={handleAnimationComplete}
-            className="text-4xl leading-snug font-medium text-black"
+            className="text-4xl leading-snug font-medium text-gray-200"
           />
 
           <img
@@ -70,7 +70,7 @@ const AboutMe: React.FC = () => {
             animateBy="words"
             direction="top"
             onAnimationComplete={handleAnimationComplete}
-            className="text-2xl leading-snug font-medium text-black"
+            className="text-2xl leading-snug font-medium text-gray-200"
           />
 
           <BlurText
@@ -84,7 +84,7 @@ const AboutMe: React.FC = () => {
             animateBy="words"
             direction="top"
             onAnimationComplete={handleAnimationComplete}
-            className="text-2xl leading-snug font-medium text-black"
+            className="text-2xl leading-snug font-medium text-gray-200"
           />
 
           <BlurText
@@ -96,7 +96,7 @@ const AboutMe: React.FC = () => {
             animateBy="words"
             direction="top"
             onAnimationComplete={handleAnimationComplete}
-            className="text-2xl leading-snug font-medium text-black"
+            className="text-2xl leading-snug font-medium text-gray-200"
           />
         </div>
       </div>

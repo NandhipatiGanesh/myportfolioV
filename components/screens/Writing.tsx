@@ -41,12 +41,12 @@ const WritingSection: React.FC = () => {
   const [activeTab, setActiveTab] = useState('Blog posts')
 
   return (
-    <section className="flex min-h-screen flex-col bg-white md:flex-row">
+    <section className="flex min-h-screen flex-col bg-black md:flex-row">
       {/* Left Column (Sticky Heading) */}
       <div className="w-full px-4 py-10 sm:px-6 md:w-2/5 md:px-10 md:py-20 lg:px-20">
         <div className="sticky top-20 md:top-32">
-          <div className="mb-4 h-[2px] w-full bg-black" />
-          <h2 className="text-6xl font-semibold text-black">Writing</h2>
+          <div className="mb-4 h-[2px] w-full bg-gray-500" />
+          <h2 className="text-6xl font-semibold text-gray-200">Writing</h2>
         </div>
       </div>
 
@@ -58,10 +58,10 @@ const WritingSection: React.FC = () => {
             <button
               key={filter}
               onClick={() => setActiveTab(filter)}
-              className={`cursor-pointer transform rounded-full px-6 py-2 text-base font-medium whitespace-nowrap transition-all duration-200 hover:-translate-y-1 ${
+              className={`cursor-pointer rounded-full border border-white/30 px-10 py-3 font-medium whitespace-nowrap backdrop-blur-md transition transition-all duration-200 hover:-translate-y-1 ${
                 activeTab === filter
-                  ? 'bg-black text-white hover:opacity-90'
-                  : 'bg-gray-200 text-black hover:bg-gray-300'
+                  ? 'bg-gray-200 text-black hover:opacity-90'
+                  : 'bg-white/10 text-white hover:bg-gray-300'
               }`}
             >
               {filter}
@@ -74,10 +74,10 @@ const WritingSection: React.FC = () => {
           {writings.map((item) => (
             <div
               key={item.id}
-              className="rounded-lg border-b border-gray-200 p-2 pb-6 transition-colors duration-200 hover:bg-gray-50 md:p-4 lg:p-4"
+              className="rounded-lg border-b border-gray-200 p-2 pb-6 transition-colors duration-200 hover:border hover:border-white/30  hover:bg-white/10 hover:backdrop-blur-md md:p-4 lg:p-4"
             >
-              <p className="group relative mb-2 cursor-pointer text-3xl font-medium text-black">
-                <span className="bg-gradient-to-r from-black to-black bg-[length:0%_2px] bg-left-bottom bg-no-repeat transition-all duration-500 group-hover:bg-[length:100%_2px]">
+              <p className="group relative mb-2 cursor-pointer text-3xl font-medium text-gray-200">
+                <span className="bg-gradient-to-r from-gray-200 to-gray-200 bg-[length:0%_2px] bg-left-bottom bg-no-repeat transition-all duration-500 group-hover:bg-[length:100%_2px]">
                   {item.title}
                 </span>
               </p>
@@ -96,7 +96,7 @@ const WritingSection: React.FC = () => {
 
           {/* View All */}
           <div className="pt-6">
-            <p className="cursor-pointer p-2 text-2xl font-medium text-black hover:underline">
+            <p className="cursor-pointer p-2 text-2xl font-medium text-gray-200 hover:underline">
               View all writing →
             </p>
           </div>

@@ -78,19 +78,19 @@ const WorkSection: React.FC = () => {
   const projects = getVisibleProjects();
 
   return (
-    <section className="px-4 py-20 sm:px-6 md:px-10 lg:px-20 bg-white">
-      <div className="mb-6 h-[2px] w-full bg-black" />
+    <section className="px-4 py-20 sm:px-6 md:px-10 lg:px-20 bg-black">
+      <div className="mb-6 h-[2px] w-full bg-gray-500" />
       <div className="flex justify-between items-center mb-10 flex-wrap gap-4">
-        <h2 className="text-6xl font-semibold text-black">Work</h2>
+        <h2 className="text-6xl font-semibold text-gray-200">Work</h2>
         <div className="flex gap-4">
           {tabs.map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`rounded-full px-6 py-2 text-base font-medium transition-all duration-300 ease-in-out transform hover:-translate-y-1 cursor-pointer ${
+              className={`rounded-full border border-white/30  px-10 py-3 font-medium  backdrop-blur-md transition hover:-translate-y-1 cursor-pointer ${
                 activeTab === tab
-                  ? 'bg-black text-white hover:opacity-90'
-                  : 'bg-gray-200 text-black hover:bg-gray-300'
+                  ? 'bg-gray-200 text-black hover:opacity-90'
+                  : 'bg-white/10 text-white hover:bg-gray-300'
               }`}
             >
               {tab}
@@ -110,7 +110,7 @@ const WorkSection: React.FC = () => {
             />
           </div>
           <div className="mt-4">
-            <p className="text-2xl font-semibold text-black">{projects[0].title} →</p>
+            <p className="text-2xl font-semibold text-gray-200">{projects[0].title} →</p>
             
           </div>
         </div>
@@ -128,7 +128,7 @@ const WorkSection: React.FC = () => {
               />
             </div>
             <div>
-              <p className="text-xl sm:text-2xl font-semibold text-black">{project.title} →</p>
+              <p className="text-xl sm:text-2xl font-semibold text-gray-200">{project.title} →</p>
               
             </div>
           </div>

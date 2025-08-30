@@ -1,5 +1,5 @@
-'use client';
-import React, { useRef } from 'react';
+'use client'
+import React, { useRef } from 'react'
 
 const testimonials = [
   {
@@ -86,36 +86,32 @@ Kernel ended up with a website that converts really well. Working with Bryn is a
     title: 'Freelance Designer, Kernel',
     avatar: '/images/testimonials/zander.jpeg',
   },
-];
-
+]
 
 const TestimonialSection: React.FC = () => {
-  const scrollRef = useRef<HTMLDivElement>(null);
+  const scrollRef = useRef<HTMLDivElement>(null)
 
   const scroll = (direction: 'left' | 'right') => {
-    if (!scrollRef.current) return;
-    const amount = 450;
+    if (!scrollRef.current) return
+    const amount = 450
     scrollRef.current.scrollBy({
       left: direction === 'left' ? -amount : amount,
       behavior: 'smooth',
-    });
-  };
+    })
+  }
 
   return (
-    <section className="px-4 py-20 sm:px-6 md:px-10 lg:px-20 bg-white">
-      <div className="mb-6 h-[2px] w-full bg-black" />
-      <h2 className="text-5xl font-semibold text-black mb-10">Testimonials</h2>
+    <section className="bg-black px-4 py-20 sm:px-6 md:px-10 lg:px-20">
+      <div className="mb-6 h-[2px] w-full bg-gray-500" />
+      <h2 className="mb-10 text-5xl font-semibold text-gray-200">
+        Testimonials
+      </h2>
 
       {/* Full‑bleed only on md+ so mobile stays aligned under the heading */}
       <div className="md:-mx-10 lg:-mx-20">
         <div
           ref={scrollRef}
-          className={`
-            flex gap-6 overflow-x-auto scroll-smooth pb-4
-            px-4 md:px-0
-            snap-x snap-mandatory
-            [-ms-overflow-style:none] [scrollbar-width:none]
-          `}
+          className={`flex snap-x snap-mandatory gap-6 overflow-x-auto scroll-smooth px-4 pb-4 [-ms-overflow-style:none] [scrollbar-width:none] md:px-0`}
         >
           {/* hide scrollbar for webkit */}
           <style jsx>{`
@@ -127,26 +123,22 @@ const TestimonialSection: React.FC = () => {
           {testimonials.map((t) => (
             <div
               key={t.id}
-              className={`
-                bg-gray-100 p-8 rounded-xl shadow-sm hover:shadow-md transition-all duration-300
-                flex flex-col justify-between
-                h-auto md:h-[420px]
-                min-w-[85vw] sm:min-w-[420px] md:min-w-[490px]
-                snap-start
-              `}
+              className={`flex h-auto min-w-[85vw] snap-start flex-col justify-between rounded-xl border border-white/30 bg-white/10 p-8 font-medium text-white shadow-sm backdrop-blur-md transition transition-all duration-300 hover:shadow-md sm:min-w-[420px] md:h-[fit-content] md:min-w-[490px]`}
             >
-              <p className="text-[1.05rem] md:text-[1.25rem] text-black leading-relaxed whitespace-pre-line mb-6">
+              <p className="mb-6 text-[1.05rem] leading-relaxed whitespace-pre-line text-gray-200 md:text-[1.25rem]">
                 {t.text}
               </p>
-              <div className="flex items-center gap-3 mt-auto">
+              <div className="mt-auto flex items-center gap-3">
                 <img
                   src={t.avatar}
                   alt={t.name}
-                  className="w-12 h-12 rounded-full object-cover"
+                  className="h-12 w-12 rounded-full object-cover"
                 />
                 <div>
-                  <p className="text-lg font-semibold text-black">{t.name}</p>
-                  <p className="text-sm text-gray-600">{t.title}</p>
+                  <p className="text-lg font-semibold text-gray-200">
+                    {t.name}
+                  </p>
+                  <p className="text-sm text-gray-500">{t.title}</p>
                 </div>
               </div>
             </div>
@@ -154,18 +146,18 @@ const TestimonialSection: React.FC = () => {
         </div>
 
         {/* Arrows */}
-        <div className="flex justify-center mt-8">
-          <div className="flex items-center gap-6 px-6 py-3 bg-black rounded-full">
+        <div className="mt-8 flex justify-center">
+          <div className="flex items-center gap-6 rounded-full border border-white/30 bg-white/10 px-6 py-3 backdrop-blur-md">
             <button
               onClick={() => scroll('left')}
-              className="text-white text-xl hover:scale-110 transition"
+              className="text-xl text-white transition hover:scale-110"
               aria-label="Scroll testimonials left"
             >
               ←
             </button>
             <button
               onClick={() => scroll('right')}
-              className="text-white text-xl hover:scale-110 transition"
+              className="text-xl text-white transition hover:scale-110"
               aria-label="Scroll testimonials right"
             >
               →
@@ -174,7 +166,7 @@ const TestimonialSection: React.FC = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default TestimonialSection;
+export default TestimonialSection

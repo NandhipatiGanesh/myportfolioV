@@ -20,12 +20,12 @@ const experiences = [
 
 const ExperienceSection: React.FC = () => {
   return (
-    <section className="flex min-h-screen flex-col bg-white md:flex-row">
+    <section className="flex min-h-screen flex-col bg-black md:flex-row">
       {/* Left Column (Heading) - now 2/5 */}
       <div className="w-full px-4 py-10 sm:px-6 md:w-2/5 md:px-10 md:py-20 lg:px-20">
         <div className="sticky top-20 md:top-32">
-          <div className="mb-4 h-[2px] w-full bg-black" />
-          <h2 className="text-6xl font-semibold text-black">Experience</h2>
+          <div className="mb-4 h-[2px] w-full bg-gray-500" />
+          <h2 className="text-6xl font-semibold text-gray-200">Experience</h2>
         </div>
       </div>
 
@@ -34,7 +34,7 @@ const ExperienceSection: React.FC = () => {
         {experiences.map((exp) => (
           <div
             key={exp.id}
-            className="flex items-start gap-5 rounded-lg border-b border-gray-200 lg:p-4 md:p-4 p-2 hover:bg-gray-50 cursor-pointer"
+            className="flex cursor-pointer items-start gap-5 rounded-lg border-b border-gray-500 p-2 hover:border hover:border-white/30  hover:bg-white/10 hover:backdrop-blur-md md:p-4 lg:p-4"
           >
             <img
               src={exp.logo}
@@ -42,13 +42,13 @@ const ExperienceSection: React.FC = () => {
               className="h-14 w-14 rounded-lg object-contain"
             />
             <div className="cursor-pointer">
-              <p className="mb-1 cursor-pointer text-3xl font-semibold text-black">
+              <p className="mb-1 cursor-pointer text-3xl font-semibold text-gray-200">
                 {exp.company}
               </p>
-              <p className="mb-1 cursor-pointer text-2xl text-black">
+              <p className="mb-1 cursor-pointer text-2xl text-gray-200">
                 {exp.role}
               </p>
-              <p className="mt-1 text-lg font-medium text-gray-500">
+              <p className="mt-1 text-lg font-medium text-gray-200">
                 {exp.date}
               </p>
             </div>
@@ -57,7 +57,7 @@ const ExperienceSection: React.FC = () => {
 
         {/* See Full CV Button */}
         <div className="pt-8">
-          <button className="transform rounded-full bg-black px-7 py-3 font-medium text-white transition-all hover:-translate-y-1 hover:opacity-90">
+          <button className="cursor-pointer rounded-full border border-white/30 bg-white/10 px-10 py-3 font-medium text-white backdrop-blur-md transition hover:-translate-y-1 hover:opacity-90">
             See full CV →
           </button>
         </div>

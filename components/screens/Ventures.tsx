@@ -1,5 +1,5 @@
-'use client';
-import React from 'react';
+'use client'
+import React from 'react'
 
 const VenturesSection: React.FC = () => {
   const ventures = [
@@ -54,35 +54,37 @@ const VenturesSection: React.FC = () => {
       subtitle: 'The best sites on the web',
       image: '/images/ventures/transaccio.png',
     },
-  ];
+  ]
 
   return (
-    <section className="px-4 py-20 sm:px-6 md:px-10 lg:px-20 bg-white">
-      <div className="mb-6 h-[2px] w-full bg-black" />
-      <h2 className="text-6xl font-semibold text-black mb-10">Wordpress</h2>
+    <section className="bg-black px-4 py-20 sm:px-6 md:px-10 lg:px-20">
+      <div className="mb-6 h-[2px] w-full bg-gray-200" />
+      <h2 className="mb-10 text-6xl font-semibold text-gray-200">Wordpress</h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">
         {ventures.map((venture, index) => (
           <div key={index} className="space-y-3">
             {/* Image */}
-            <div className="w-full h-80 rounded-xl overflow-hidden bg-white border border-gray-200">
+            <div className="h-80 w-full overflow-hidden rounded-xl border border-gray-200 bg-white">
               <img
                 src={venture.image}
                 alt={venture.title}
-                className="w-full h-full object-contain rounded-xl transition duration-300 ease-in-out hover:brightness-90 hover:scale-105"
+                className="h-full w-full rounded-xl object-contain transition duration-300 ease-in-out hover:scale-105 hover:brightness-90"
               />
             </div>
 
             {/* Title and Subtitle */}
             <div>
-              <p className="text-2xl font-semibold text-black">{venture.title} →</p>
-              <p className="text-xl text-black">{venture.subtitle}</p>
+              <p className="text-2xl font-semibold text-gray-200">
+                {venture.title} →
+              </p>
+              <p className="text-xl text-gray-200">{venture.subtitle}</p>
             </div>
           </div>
         ))}
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default VenturesSection;
+export default VenturesSection

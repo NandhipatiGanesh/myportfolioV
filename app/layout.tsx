@@ -1,6 +1,5 @@
 import { DM_Sans } from 'next/font/google';
 import './globals.css';
-import { Footer } from './footer';
 import { ThemeProvider } from 'next-themes';
 import AnnouncementBanner from '@/components/screens/announcement-banner';
 
@@ -49,7 +48,6 @@ export default function RootLayout({
             <div className="flex w-full flex-col">
               <div className="relative mx-auto w-full flex-1">
                 {children}
-                <Footer />
               </div>
             </div>
           </div>

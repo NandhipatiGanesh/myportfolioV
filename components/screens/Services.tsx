@@ -31,17 +31,17 @@ const services = [
 
 const ServicesSection: React.FC = () => {
   return (
-    <section className="bg-white px-4 py-20 sm:px-6 md:px-10 lg:px-20">
+    <section className="bg-black px-4 py-20 sm:px-6 md:px-10 lg:px-20">
       {/* Top line and heading */}
-      <div className="mb-6 h-[2px] w-full bg-black" />
-      <h2 className="mb-12 text-6xl font-semibold text-black">Services</h2>
+
+      <h2 className="mb-12 text-6xl font-semibold text-gray-200">Services</h2>
 
       {/* Services List */}
       <div className="space-y-10">
         {services.map((service) => (
           <div
             key={service.id}
-            className="cursor-pointer border-b border-gray-200 p-2 pb-6 hover:bg-gray-50 md:p-4 lg:p-4 rounded-lg transition duraton-200"
+            className="duraton-200 cursor-pointer rounded-lg border-b border-gray-500 p-2 pb-6 transition hover:border hover:border-white/30 hover:bg-white/10 hover:backdrop-blur-md md:p-4 lg:p-4"
           >
             <div className="flex flex-col gap-6 md:flex-row md:items-center">
               {/* Image */}
@@ -52,7 +52,7 @@ const ServicesSection: React.FC = () => {
               />
 
               {/* Title */}
-              <p className="text-3xl font-semibold text-black md:text-4xl">
+              <p className="text-3xl font-semibold text-gray-200 md:text-4xl">
                 {service.title}
               </p>
             </div>
