@@ -25,7 +25,7 @@ const ExperienceSection: React.FC = () => {
       <div className="w-full px-4 py-10 sm:px-6 md:w-2/5 md:px-10 md:py-20 lg:px-20">
         <div className="sticky top-20 md:top-32">
           <div className="mb-4 h-[2px] w-full bg-gray-500" />
-          <h2 className="text-6xl font-semibold text-gray-200">Experience</h2>
+          <h2 className="text-4xl font-semibold text-gray-200">Experience</h2>
         </div>
       </div>
 
@@ -42,10 +42,10 @@ const ExperienceSection: React.FC = () => {
               className="h-14 w-14 rounded-lg object-contain"
             />
             <div className="cursor-pointer">
-              <p className="mb-1 cursor-pointer text-3xl font-semibold text-gray-200">
+              <p className="mb-1 cursor-pointer md:text-3xl lg:text-3xl text-2xl  font-semibold text-gray-200">
                 {exp.company}
               </p>
-              <p className="mb-1 cursor-pointer text-2xl text-gray-200">
+              <p className="mb-1 cursor-pointer text-xl md:text-2xl lg:text-2xl text-gray-200">
                 {exp.role}
               </p>
               <p className="mt-1 text-lg font-medium text-gray-200">

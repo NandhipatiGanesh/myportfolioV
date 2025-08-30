@@ -39,14 +39,14 @@ const Footer = () => {
           <div className="mb-10 flex flex-col items-start justify-between gap-6 md:flex-row md:items-center">
             {/* Rotated G Icon */}
             {/* Rotated G Icon */}
-            <div className="flex w-full justify-center md:w-auto md:justify-start">
+            <div className="flex w-full justify-start md:w-auto md:justify-start">
               <p className="rotate-[45deg] transform cursor-pointer text-5xl font-bold text-white transition-transform duration-500 hover:rotate-0">
                 G
               </p>
             </div>
 
             {/* Description */}
-            <div className="max-w-xl text-center text-3xl font-semibold md:text-left">
+            <div className="max-w-xl  text-3xl font-semibold md:text-left">
               <BlurText
                 text=" I’m Ganesh — a freelance web developer and mobile application
                 developer based in Hyderabad"
@@ -60,8 +60,8 @@ const Footer = () => {
 
             {/* Buttons */}
             {/* Buttons */}
-            <div className="flex w-full justify-center gap-3 md:w-auto md:justify-end">
-              <button className="cursor-pointer rounded-full border bg-white px-4 py-3 font-medium transition hover:-translate-y-1">
+            <div className="flex w-full flex-col md:flex-row justify-start gap-3 md:w-auto md:justify-end">
+              <button className="cursor-pointer  rounded-full border bg-white px-4 py-3 font-medium transition hover:-translate-y-1">
                 Copy email
               </button>
               <button className="cursor-pointer rounded-full border border-white/30 bg-white/10 px-10 py-3 font-medium text-white backdrop-blur-md transition hover:-translate-y-1">

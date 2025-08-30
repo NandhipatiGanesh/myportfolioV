@@ -103,7 +103,7 @@ const TestimonialSection: React.FC = () => {
   return (
     <section className="bg-black px-4 py-20 sm:px-6 md:px-10 lg:px-20">
       <div className="mb-6 h-[2px] w-full bg-gray-500" />
-      <h2 className="mb-10 text-5xl font-semibold text-gray-200">
+      <h2 className="mb-10 text-4xl font-semibold text-gray-200">
         Testimonials
       </h2>
 

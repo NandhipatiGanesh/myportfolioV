@@ -81,13 +81,13 @@ const WorkSection: React.FC = () => {
     <section className="px-4 py-20 sm:px-6 md:px-10 lg:px-20 bg-black">
       <div className="mb-6 h-[2px] w-full bg-gray-500" />
       <div className="flex justify-between items-center mb-10 flex-wrap gap-4">
-        <h2 className="text-6xl font-semibold text-gray-200">Work</h2>
-        <div className="flex gap-4">
+        <h2 className="text-4xl font-semibold text-gray-200">Work</h2>
+        <div className="flex gap-2">
           {tabs.map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
-              className={`rounded-full border border-white/30  px-10 py-3 font-medium  backdrop-blur-md transition hover:-translate-y-1 cursor-pointer ${
+              className={`rounded-full border border-white/30  md:px-10 md:py-3 px-8 py-2 font-medium  backdrop-blur-md transition hover:-translate-y-1 cursor-pointer ${
                 activeTab === tab
                   ? 'bg-gray-200 text-black hover:opacity-90'
                   : 'bg-white/10 text-white hover:bg-gray-300'

@@ -74,10 +74,10 @@ export default function Hero() {
             <span className="">Freelance Web Developer</span>
           </h1>
 
-          <div className="mt-8 flex gap-4 flex-wrap justify-center">
+          <div className="mt-8 flex flex-col w-full md:flex-row lg:flex-row gap-4 flex-wrap justify-center">
             <a
               href="#"
-              className="rounded-full bg-white px-10 py-3 font-medium text-black shadow-lg transition hover:-translate-y-1"
+              className="rounded-full  bg-white px-10 py-3 font-medium text-black shadow-lg transition hover:-translate-y-1"
             >
               Get Started
             </a>

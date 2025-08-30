@@ -46,7 +46,7 @@ const WritingSection: React.FC = () => {
       <div className="w-full px-4 py-10 sm:px-6 md:w-2/5 md:px-10 md:py-20 lg:px-20">
         <div className="sticky top-20 md:top-32">
           <div className="mb-4 h-[2px] w-full bg-gray-500" />
-          <h2 className="text-6xl font-semibold text-gray-200">Writing</h2>
+          <h2 className="text-4xl font-semibold text-gray-200">Writing</h2>
         </div>
       </div>
 

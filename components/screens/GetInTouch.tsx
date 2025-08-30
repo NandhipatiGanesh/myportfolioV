@@ -50,14 +50,14 @@ const GetInTouchSection: React.FC = () => {
         animateBy="words"
         direction="top"
         onAnimationComplete={handleAnimationComplete}
-        className="mb-10 text-5xl font-semibold text-gray-200 md:text-7xl"
+        className="md:mb-10 lg:mb-10 mb-1   text-3xl md:text-5xl lg:text-5xl font-semibold text-gray-200 md:text-7xl"
       />
       <br />
       <br />
 
-      <div className="flex flex-col justify-between gap-12 md:flex-row">
+      <div className="flex flex-col justify-between gap-12 md:gap-12 lg:gap-12  md:flex-row">
         {/* Left Column */}
-        <div className="space-y-3 text-2xl font-medium text-gray-200 md:w-2/3">
+        <div className="text-2xl font-medium text-gray-200 md:w-2/3">
           <BlurText
             text="Send some details about your project to ganeshwebby@gmail.com. I can help designing a website, designing a new product, improving
             an existing part of your product, building a strong design system,
@@ -69,17 +69,17 @@ const GetInTouchSection: React.FC = () => {
             animateBy="words"
             direction="top"
             onAnimationComplete={handleAnimationComplete}
-            className="mb-6 text-4xl font-semibold text-gray-200 md:text-3xl"
+            className="mb-6 text-2xl md:text-4xl lg:text-4xl font-semibold text-gray-200 md:text-3xl"
           />
           <br />
           <br />
 
           {/* Buttons */}
-          <div className="flex w-full justify-center gap-3 md:w-auto md:justify-start">
-            <button className="cursor-pointer rounded-full border bg-white px-10 py-3 font-medium text-black transition hover:-translate-y-1">
+          <div className="flex flex-col md:flex-row lg:flex-row w-full justify-center gap-3 md:w-auto md:justify-start">
+            <button className="cursor-pointer text-[16px] rounded-full border bg-white  px-10 py-3 font-medium text-black transition hover:-translate-y-1">
               Copy email
             </button>
-            <button className="cursor-pointer rounded-full border border-white/30 bg-white/10 px-10 py-3 font-medium text-white backdrop-blur-md transition hover:-translate-y-1">
+            <button className="cursor-pointer text-[16px] rounded-full border border-white/30 bg-white/10 px-10 py-3 font-medium text-white backdrop-blur-md transition hover:-translate-y-1">
               Email me →
             </button>
           </div>

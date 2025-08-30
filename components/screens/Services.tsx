@@ -34,7 +34,7 @@ const ServicesSection: React.FC = () => {
     <section className="bg-black px-4 py-20 sm:px-6 md:px-10 lg:px-20">
       {/* Top line and heading */}
 
-      <h2 className="mb-12 text-6xl font-semibold text-gray-200">Services</h2>
+      <h2 className="mb-12 text-4xl font-semibold text-gray-200">Services</h2>
 
       {/* Services List */}
       <div className="space-y-10">
@@ -52,7 +52,7 @@ const ServicesSection: React.FC = () => {
               />
 
               {/* Title */}
-              <p className="text-3xl font-semibold text-gray-200 md:text-4xl">
+              <p className="text-2xl md:text-3xl lg:text-3xl font-semibold text-gray-200 md:text-4xl">
                 {service.title}
               </p>
             </div>

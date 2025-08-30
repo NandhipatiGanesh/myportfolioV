@@ -31,7 +31,7 @@ const AboutMe: React.FC = () => {
         animateBy="words"
         direction="top"
         onAnimationComplete={handleAnimationComplete}
-        className="mb-12 text-6xl font-semibold text-gray-200"
+        className="mb-12 text-4xl font-semibold text-gray-200"
       />
       <br />
       <br />
@@ -47,7 +47,7 @@ const AboutMe: React.FC = () => {
             animateBy="words"
             direction="top"
             onAnimationComplete={handleAnimationComplete}
-            className="text-4xl leading-snug font-medium text-gray-200"
+            className="text-2xl md:text-4xl lg:text-4xl leading-snug font-medium text-gray-200"
           />
 
           <img

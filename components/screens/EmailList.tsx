@@ -19,7 +19,7 @@ const EmailListSection: React.FC = () => {
       {/* Heading */}
       <SplitText
         text="Email list"
-        className="mb-10 text-6xl font-semibold text-gray-200"
+        className="mb-10 text-4xl font-semibold text-gray-200"
         delay={100}
         duration={0.6}
         ease="power3.out"
@@ -35,18 +35,18 @@ const EmailListSection: React.FC = () => {
       <br />
 
       {/* Subheading */}
-      <h3 className="mb-10 max-w-5xl text-5xl leading-tight font-bold text-gray-200 sm:text-7xl md:w-3/5">
+      <h3 className="md:mb-10 lg:mb-10 mb-5 max-w-5xl w-full text-3xl md:text-5xl lg:text-5xl leading-tight font-bold text-gray-200 sm:text-7xl md:w-3/5">
         Get design insights and articles straight to your inbox
       </h3>
 
       {/* Input and button */}
-      <div className="mb-4 flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+      <div className="mb-4  flex flex-col items-start gap-4 sm:flex-row sm:items-center">
         <input
           type="email"
           placeholder="Your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
-          className="cursor-pointer rounded-full border border-white/30 bg-white/10 px-10 py-3 font-medium text-white backdrop-blur-md transition  focus:outline-none sm:w-[300px]"
+          className="cursor-pointer rounded-full border border-white/30 bg-white/10 px-10 py-3 font-medium text-white backdrop-blur-md transition  focus:outline-none mobile-fullhere   md:w-[300px] lg:w-[300px]"
         />
         <button
           onClick={handleSubscribe}
