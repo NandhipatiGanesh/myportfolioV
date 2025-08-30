@@ -22,20 +22,6 @@ const AboutSection: React.FC = () => {
             />
           </div>
         </div>
-        <div className="mt-8 flex justify-center gap-4">
-          <a
-            href="#"
-            className="rounded-full bg-white px-10 py-3 font-medium text-black shadow-lg transition"
-          >
-            Let's Connect
-          </a>
-          <a
-            href="#"
-            className="rounded-full border border-white/30 bg-white/10 px-10 py-3 font-medium text-white backdrop-blur-md transition"
-          >
-            Learn More
-          </a>
-        </div>
       </div>
     </section>
   )
